@@ -2,32 +2,122 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+/* Fonts Strawford */
+@font-face {
+  font-family: 'strawford__regular';
+  src: url(../app/assets/fonts/Strawford/Strawford_Regular.ttf);
+}
+@font-face {
+  font-family: 'strawford__bold';
+  src: url(../app/assets/fonts/Strawford/Strawford_Bold.ttf);
+}
+@font-face {
+  font-family: 'strawford__light';
+  src: url(../app/assets/fonts/Strawford/Strawford_Light.ttf);
+}
+@font-face {
+  font-family: 'strawford__medium';
+  src: url(../app/assets/fonts/Strawford/Strawford_Medium.ttf);
+}
+@font-face {
+  font-family: 'strawford__thin';
+  src: url(../app/assets/fonts/Strawford/Strawford_Thin.ttf);
+}
+@font-face {
+  font-family: 'strawford__bolditalic';
+  src: url(../app/assets/fonts/Strawford/Strawford_Bold_Italic.ttf);
+}
+@font-face {
+  font-family: 'strawford__lightitalic';
+  src: url(../app/assets/fonts/Strawford/Strawford_Light_Italic.ttf);
+}
+@font-face {
+  font-family: 'strawford__mediumitalic';
+  src: url(../app/assets/fonts/Strawford/Strawford_Medium_Italic.ttf);
+}
+@font-face {
+  font-family: 'strawford__thinitalic';
+  src: url(../app/assets/fonts/Strawford/Strawford_Thin_Italic.ttf);
+}
+@font-face {
+  font-family: 'strawford__black';
+  src: url(../app/assets/fonts/Strawford/Strawford_Black.ttf);
+}
+@font-face {
+  font-family: 'strawford__blackitalic';
+  src: url(../app/assets/fonts/Strawford/Strawford_Black_Italic.ttf);
 }
 
-@media (prefers-color-scheme: dark) {
+/* Variables CSS */
+
+:root {
+  --primary: #1b2027;
+  --primary_gradient: #104560;
+  --secondary: #305d73;
+  --tertiary: #6a8d95;
+  --olive: #232d12;
+  --white: #ffff;
+  --black: #111111;
+}
+
+/* @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
-}
+} */
 
-body {
-  color: rgb(var(--foreground-rgb));
+/* Custom CSS */
+html {
+  height: 100%;
+  font-size: 62.5%; /* 1rem = 10px */
+  box-sizing: border-box;
+  width: 100%;
+  overflow-x: hidden;
+  text-size-adjust: none;
+  font-family: 'Strawford__regular';
+  color: var(--white);
   background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    156deg,
+    var(--primary) 43.97%,
+    var(--primary_gradient) 99.26%
+  );
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'strawford__bold';
+}
+h1 {
+  font-size: 4.8rem;
+}
+h2 {
+  font-size: 4rem;
+}
+h3 {
+  font-size: 3.2rem;
+}
+h4 {
+  font-size: 2.8rem;
+}
+img {
+  max-width: 100%;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+/** Utilidades **/
+.no-margin {
+  margin: 0;
+}
+.no-padding {
+  padding: 0;
+}
+.center {
+  text-align: center;
 }
