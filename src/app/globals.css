@@ -2,50 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Fonts Strawford */
+/** Fonts Strawford **/
 @font-face {
-  font-family: 'strawford__regular';
-  src: url(../app/assets/fonts/Strawford/Strawford_Regular.ttf);
-}
-@font-face {
-  font-family: 'strawford__bold';
-  src: url(../app/assets/fonts/Strawford/Strawford_Bold.ttf);
-}
-@font-face {
-  font-family: 'strawford__light';
-  src: url(../app/assets/fonts/Strawford/Strawford_Light.ttf);
-}
-@font-face {
-  font-family: 'strawford__medium';
-  src: url(../app/assets/fonts/Strawford/Strawford_Medium.ttf);
-}
-@font-face {
-  font-family: 'strawford__thin';
-  src: url(../app/assets/fonts/Strawford/Strawford_Thin.ttf);
-}
-@font-face {
-  font-family: 'strawford__bolditalic';
-  src: url(../app/assets/fonts/Strawford/Strawford_Bold_Italic.ttf);
-}
-@font-face {
-  font-family: 'strawford__lightitalic';
-  src: url(../app/assets/fonts/Strawford/Strawford_Light_Italic.ttf);
-}
-@font-face {
-  font-family: 'strawford__mediumitalic';
-  src: url(../app/assets/fonts/Strawford/Strawford_Medium_Italic.ttf);
-}
-@font-face {
-  font-family: 'strawford__thinitalic';
-  src: url(../app/assets/fonts/Strawford/Strawford_Thin_Italic.ttf);
-}
-@font-face {
-  font-family: 'strawford__black';
-  src: url(../app/assets/fonts/Strawford/Strawford_Black.ttf);
-}
-@font-face {
-  font-family: 'strawford__blackitalic';
-  src: url(../app/assets/fonts/Strawford/Strawford_Black_Italic.ttf);
+  font-family: 'strawford';
+  src: url(/../app/assets/fonts/Strawford/Strawford_Regular.ttf);
 }
 
 /* Variables CSS */
@@ -54,8 +14,10 @@
   --primary: #1b2027;
   --primary_gradient: #104560;
   --secondary: #305d73;
+  --secondary_gradient: #8ab1c3;
   --tertiary: #6a8d95;
   --olive: #232d12;
+  --capital: #d2f891;
   --white: #ffff;
   --black: #111111;
 }
@@ -68,7 +30,39 @@
   }
 } */
 
-/* Custom CSS */
+/** Utilidades **/
+.no-margin {
+  margin: 0;
+}
+.no-padding {
+  padding: 0;
+}
+.center {
+  text-align: center;
+}
+
+.content {
+  background: var(--secondary_gradient);
+  background: linear-gradient(
+    180deg,
+    var(--secondary_gradient) -44.74%,
+    var(--secondary) 54.72%
+  );
+}
+
+.shadow {
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.olive {
+  color: var(--olive);
+}
+
+.capital {
+  color: var(--capital);
+}
+
+/** Custom CSS **/
 html {
   height: 100%;
   font-size: 62.5%; /* 1rem = 10px */
@@ -76,24 +70,26 @@ html {
   width: 100%;
   overflow-x: hidden;
   text-size-adjust: none;
-  font-family: 'Strawford__regular';
+  font-family: strawford;
   color: var(--white);
   background: linear-gradient(
     156deg,
-    var(--primary) 43.97%,
+    var(--primary) 60.97%,
     var(--primary_gradient) 99.26%
   );
+  background-attachment: fixed;
 }
 *,
 *:before,
 *:after {
   box-sizing: inherit;
+  font-family: strawford;
 }
 h1,
 h2,
 h3,
 h4 {
-  font-family: 'strawford__bold';
+  font-family: strawford;
 }
 h1 {
   font-size: 4.8rem;
@@ -107,17 +103,13 @@ h3 {
 h4 {
   font-size: 2.8rem;
 }
+p {
+  font-size: 1.8rem;
+}
 img {
   max-width: 100%;
 }
 
-/** Utilidades **/
-.no-margin {
-  margin: 0;
-}
-.no-padding {
-  padding: 0;
-}
-.center {
-  text-align: center;
+a:hover {
+  text-decoration: underline;
 }
