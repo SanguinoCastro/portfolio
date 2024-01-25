@@ -1,6 +1,6 @@
 const Header = () => {
   return (
-    <header className='content shadow w-full h-[5.2rem] flex justify-between items-center px-7  rounded-[1.6rem]'>
+    <header className='content shadow w-full h-[5.2rem] flex justify-between items-center px-7  border-rad'>
       <div className='flex items-center gap-10'>
         <h3>ES</h3>
         <p>
