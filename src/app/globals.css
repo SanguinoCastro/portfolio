@@ -16,7 +16,9 @@
   --secondary: #305d73;
   --secondary_gradient: #8ab1c3;
   --tertiary: #6a8d95;
+  --husk: #bb9f54;
   --olive: #232d12;
+  --olive_hover: #d8d6bc;
   --capital: #d2f891;
   --white: #ffff;
   --black: #111111;
@@ -58,7 +60,11 @@
 }
 
 .olive {
-  color: var(--olive);
+  background: var(--olive);
+}
+
+.olive:hover {
+  background: var(--husk);
 }
 
 .capital {
@@ -102,6 +108,7 @@ h2 {
 }
 h3 {
   font-size: 3.2rem;
+  line-height: 3.5rem;
 }
 h4 {
   font-size: 2.8rem;
@@ -113,14 +120,25 @@ img {
   max-width: 100%;
 }
 
+button {
+  box-shadow: 0px 6px 11px 0px rgba(255, 255, 255, 0.21) inset;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+button:active {
+  box-shadow: 0px 6px 11px 0px rgba(0, 0, 0, 0.25) inset;
+  filter: drop-shadow(0px 4px 4px rgba(55, 255, 255, 0.21));
+}
+
 a:hover {
   text-decoration: underline;
 }
 
-/* .grid div {
-  border: 1px solid yellow;
-} */
+section p {
+  font-size: 1.6rem;
+  line-height: 1.8rem;
+}
 
 .grid__container {
-  grid-template-rows: 2fr 3fr 2fr 12fr 1.5fr 3fr 3fr 1.5fr;
+  grid-template-rows: 2fr 2fr 2fr 12fr 1.5fr 3fr 3fr 1.5fr;
 }
