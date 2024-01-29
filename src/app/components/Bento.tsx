@@ -1,4 +1,5 @@
 import About from './About';
+import Map from './Map';
 
 const Bento = () => {
   return (
@@ -11,8 +12,8 @@ const Bento = () => {
       <div className='grid__dice col-start-5 col-end-7 row-start-2 row-end-4 content shadow border-rad'>
         Dado
       </div>
-      <div className='grid__map col-start-1 col-end-3 content shadow border-rad'>
-        Mapa
+      <div className='grid__map col-start-1 col-end-3 content shadow border-rad flex justify-center items-center p-[1rem]'>
+        <Map />
       </div>
       <div className='grid__weather col-start-3 col-end-5 content shadow border-rad'>
         Weather App
