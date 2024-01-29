@@ -5,7 +5,8 @@
 /** Fonts Strawford **/
 @font-face {
   font-family: 'strawford';
-  src: url(/../app/assets/fonts/Strawford/Strawford_Regular.ttf);
+  font-display: swap;
+  src: url(/../app/assets/fonts/Strawford/Strawford_Regular.ttf) format('ttf');
 }
 
 /* Variables CSS */
@@ -53,6 +54,7 @@
     var(--secondary_gradient) -44.74%,
     var(--secondary) 54.72%
   );
+  overflow: hidden;
 }
 
 .shadow {
