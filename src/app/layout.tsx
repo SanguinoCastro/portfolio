@@ -1,8 +1,10 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+// import { Inter } from 'next/font/google';
+import './normalize.css';
 import './globals.css';
+import './darkMode.css';
 
-const inter = Inter({ subsets: ['latin'] });
+// const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Portfolio',
@@ -17,7 +19,6 @@ export default function RootLayout({
   return (
     <html lang='es'>
       <head>
-        <link rel='stylesheet' href='normalize.css' />
         <link
           rel='preload'
           href='./assets/fonts/Strawford/Strawford_Regular.ttf'
@@ -25,7 +26,7 @@ export default function RootLayout({
           type='font/ttf'
         />
       </head>
-      <body className={inter.className}>{children}</body>
+      <body>{children}</body>
     </html>
   );
 }

@@ -1,4 +1,5 @@
 import About from './About';
+import Dark_Mode from './Dark_Mode';
 import Map from './Map';
 
 const Bento = () => {
@@ -7,7 +8,9 @@ const Bento = () => {
       <div className='grid__me content shadow border-rad col-start-1 col-end-5 row-start-1 row-end-3'>
         <About />
       </div>
-      <div className='grid__theme content shadow border-rad'>Dark Mode</div>
+      <div className='grid__theme content shadow border-rad flex justify-center items-center'>
+        <Dark_Mode />
+      </div>
       <div className='grid__lang content shadow border-rad'>Idioma</div>
       <div className='grid__dice col-start-5 col-end-7 row-start-2 row-end-4 content shadow border-rad'>
         Dado

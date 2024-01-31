@@ -1,0 +1,75 @@
+button {
+  color: white;
+  font-weight: 300;
+}
+
+.darkMode__input {
+  position: absolute;
+  margin-left: 2rem;
+  opacity: 0;
+}
+.darkMode__label {
+  position: relative;
+  height: 5.3rem;
+  width: 14rem;
+  background: url('../assets/images/night.svg');
+  background-size: expanded;
+  background-position: center;
+  border-radius: 20rem;
+  cursor: pointer;
+}
+
+#toggle-button:checked + .darkMode__label {
+  background: url('../assets/images/day.svg');
+
+  background-size: expanded;
+  background-position: center;
+}
+label .sun-moon {
+  height: 4rem;
+  width: 4rem;
+  margin-left: 9.5rem;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+#toggle-button:checked + label .sun-moon {
+  transform: translateX(-8.5rem) scale(125%);
+}
+
+#toggle-button:checked + div .content {
+  background: #ffff;
+}
+
+body.light {
+  --gradient-start: var(--tertiary);
+  --gradient-end: var(--tertiary_gradient);
+  transition:
+    1s --gradient-start,
+    1s --gradient-end;
+  background: linear-gradient(
+    156deg,
+    var(--gradient-start) 0%,
+    var(--gradient-end) 50.26%
+  );
+  background-attachment: fixed;
+  color: black;
+  font-weight: bold;
+}
+
+body.light .content {
+  --gradient-start: var(--valencia);
+  --gradient-end: var(--husk_gradient);
+  transition:
+    1s --gradient-end,
+    1s --gradient-start;
+  background: linear-gradient(
+    170deg,
+    var(--gradient-end) 50.74%,
+    var(--gradient-start) 150.72%
+  );
+}
+
+body.light .capital {
+  color: var(--valencia);
+}
