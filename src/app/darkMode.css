@@ -44,6 +44,9 @@ label .sun-moon {
 body.light {
   --gradient-start: var(--tertiary);
   --gradient-end: var(--tertiary_gradient);
+  -moz-transition:
+    1s --gradient-start,
+    1s --gradient-end;
   transition:
     1s --gradient-start,
     1s --gradient-end;
@@ -54,12 +57,15 @@ body.light {
   );
   background-attachment: fixed;
   color: black;
-  font-weight: bold;
+  font-family: strawford;
 }
 
 body.light .content {
   --gradient-start: var(--valencia);
   --gradient-end: var(--husk_gradient);
+  -moz-transition:
+    1s --gradient-end,
+    1s --gradient-start;
   transition:
     1s --gradient-end,
     1s --gradient-start;

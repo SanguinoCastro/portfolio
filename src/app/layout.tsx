@@ -19,12 +19,12 @@ export default function RootLayout({
   return (
     <html lang='es'>
       <head>
-        <link
+        {/* <link
           rel='preload'
           href='./assets/fonts/Strawford/Strawford_Regular.ttf'
           as='font'
           type='font/ttf'
-        />
+        /> */}
       </head>
       <body>{children}</body>
     </html>

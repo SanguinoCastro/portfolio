@@ -6,44 +6,52 @@ import moon from '../assets/icons/moon.png';
 import sun from '../assets/icons/sun.png';
 
 const Dark_Mode = () => {
-  const [isDarkMode, setIsDarkMode] = useState(true);
+  // Comprobamos cuál es la preferencia de modo del usuario:
+  const isDarkModePreferred = window.matchMedia(
+    '(prefers-color-scheme: dark)'
+  ).matches;
+
+  // Comprobamos si hay una preferencia guardada en el localStorage:
+  const storedThemePreference = localStorage.getItem('themePreference');
+
+  // Establecemos el modo inicial en el que se cargará la web, tomando de referencia primero si hay configuración guardada en el local storage y sino toma la preferencia del navegador/ sistema Operativo:
+  const initialDarkMode =
+    storedThemePreference === 'true' ||
+    (!storedThemePreference && isDarkModePreferred);
+
+  // Creación del useState que controlara el modo css y sus estilos
+  let [isDarkMode, setIsDarkMode] = useState(initialDarkMode);
 
   useEffect(() => {
     const body = document.body;
 
     if (!isDarkMode) {
       body.classList.add('light');
+      localStorage.setItem('themePreference', 'false');
     } else {
       body.classList.remove('light');
+      localStorage.setItem('themePreference', 'true');
     }
   }, [isDarkMode]);
 
   const handleToggle = () => {
-    setIsDarkMode((prev) => !prev);
-    console.log(isDarkMode);
+    if (isDarkMode !== !isDarkMode) {
+      setIsDarkMode((prev) => !prev);
+    }
   };
-
-  // useEffect(() => {
-  //   const toggleButton = document.getElementById('toggle-button');
-
-  //   const handleChange = () => {
-  //     document.body.classList.toggle('light');
-  //   };
-
-  //   toggleButton?.addEventListener('change', handleChange);
-
-  //   return () => {
-  //     toggleButton?.removeEventListener('change', handleChange);
-  //   };
-  // }, []);
 
   return (
     <article className='grid'>
-      <input id='toggle-button' type='checkbox' className='darkMode__input' />
+      <input
+        id='toggle-button'
+        type='checkbox'
+        className='darkMode__input'
+        checked={!isDarkMode}
+        onChange={handleToggle}
+      />
       <label
         htmlFor='toggle-button'
         className={`darkMode__label flex items-center`}
-        onClick={handleToggle}
       >
         <div className='sun-moon'>
           {isDarkMode ? (

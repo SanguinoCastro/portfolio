@@ -10,7 +10,7 @@ const About = () => {
       <div className=' flex justify-center items-center gap-[2rem]'>
         <section>
           {' '}
-          <Image src={avatar} width={344} alt='profile' />{' '}
+          <Image src={avatar} width={344} alt='profile' priority={true} />{' '}
         </section>
         <section className='text-left w-[100%]'>
           <h3>

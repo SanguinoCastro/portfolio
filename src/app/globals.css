@@ -5,8 +5,18 @@
 /** Fonts Strawford **/
 @font-face {
   font-family: 'strawford';
-  font-display: swap;
-  src: url(/../app/assets/fonts/Strawford/Strawford_Regular.ttf) format('ttf');
+  /* font-display: swap; */
+  src: url('../assets/fonts/Strawford/strawford-regular-webfont.eot');
+  src:
+    url('../assets/fonts/Strawford/strawford-regular-webfont.eot?#iefix')
+      format('embedded-opentype'),
+    url('../assets/fonts/Strawford/Strawford_Regular.ttf') format('truetype'),
+    url('../assets/fonts/Strawford/strawford-regular-webfont.woff2')
+      format('woff2'),
+    url('../assets/fonts/Strawford/strawford-regular-webfont.woff')
+      format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 
 /* Variables CSS */
@@ -92,12 +102,15 @@ html {
   width: 100%;
   overflow-x: hidden;
   text-size-adjust: none;
-  font-family: strawford !important;
+  font-family: strawford;
 }
 body {
   --gradient-start: var(--primary);
   --gradient-end: var(--primary_gradient);
   color: var(--white);
+  -moz-transition:
+    1s --gradient-start,
+    1s --gradient-end;
   transition:
     1s --gradient-start,
     1s --gradient-end;
@@ -156,13 +169,16 @@ a:hover {
 }
 
 section p {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   line-height: 1.8rem;
 }
 
 .content {
   --gradient-start: var(--secondary_gradient);
   --gradient-end: var(--secondary);
+  -moz-transition:
+    1s --gradient-start,
+    1s --gradient-end;
   transition:
     1s --gradient-start,
     1s --gradient-end;
