@@ -55,9 +55,14 @@ const Dark_Mode = () => {
       >
         <div className='sun-moon'>
           {isDarkMode ? (
-            <Image src={moon} width={400} alt='profile' />
+            <Image src={moon} width={400} alt='Modo oscuro' />
           ) : (
-            <Image src={sun} width={500} alt='profile' className='w-[20rem]' />
+            <Image
+              src={sun}
+              width={500}
+              alt='Modo claro'
+              className='w-[20rem]'
+            />
           )}
         </div>
       </label>

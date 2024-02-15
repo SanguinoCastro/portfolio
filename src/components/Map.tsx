@@ -17,7 +17,7 @@ const Map = () => {
       <Image
         src={gps}
         width={40}
-        alt='gps'
+        alt='GPS'
         className='absolute animate-bounce  cursor-pointer'
         onClick={() => {
           window.open(

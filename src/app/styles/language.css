@@ -1,0 +1,7 @@
+.lang-active:hover {
+  text-decoration: underline;
+  border: 1px solid white;
+  box-shadow: 0 0 30px #cccc;
+  transition: scale 0.4s;
+  scale: 110%;
+}

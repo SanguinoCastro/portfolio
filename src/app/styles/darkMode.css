@@ -12,7 +12,7 @@ button {
   position: relative;
   height: 5.3rem;
   width: 14rem;
-  background: url('../assets/images/night.svg');
+  background: url('../../assets/images/night.svg');
   background-size: expanded;
   background-position: center;
   border-radius: 20rem;
@@ -20,7 +20,7 @@ button {
 }
 
 #toggle-button:checked + .darkMode__label {
-  background: url('../assets/images/day.svg');
+  background: url('../../assets/images/day.svg');
 
   background-size: expanded;
   background-position: center;
