@@ -1,7 +1,32 @@
-.lang-active:hover {
+.lang-active {
+  /* text-decoration: underline; */
+  border: 1px solid var(--olive);
+  box-shadow: 0 0 10px var(--white);
+  transition: all 0.4s;
+}
+
+.lang{
+  transition: all 0.4s;
+  border: 1px solid var(--olive);
+}
+
+.lang:hover {
   text-decoration: underline;
   border: 1px solid white;
-  box-shadow: 0 0 30px #cccc;
-  transition: scale 0.4s;
+  box-shadow: 0 0 10px var(--white);
   scale: 110%;
 }
+
+{/* <div className='w-[98px] h-[99px] relative'>
+        <div className='w-[27px] h-[27px] left-[53px] top-[15px] absolute bg-zinc-300 rounded-full' />
+
+        <div className='w-[27px] h-[27px] left-[71px] top-[45px] absolute bg-zinc-300 rounded-full' />
+
+        <div className='w-[27px] h-[27px] left-[18px] top-0 absolute bg-zinc-300 rounded-full' />
+
+        <div className='w-[63px] h-[63px] left-0 top-[36px] absolute rounded-[100px] shadow-inner'>
+
+          <div className='w-[22.83px] h-[22.62px] left-[2.91px] top-[18.85px] absolute'></div>
+          
+        </div>
+      </div> */}

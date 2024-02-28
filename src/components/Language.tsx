@@ -1,29 +1,50 @@
+'use client';
+
 import Image from 'next/image';
-import español from '../assets/flags/español.svg';
+import es from '../assets/flags/flag_spain.svg';
+import ca from '../assets/flags/flag_catalan.svg';
+import en from '../assets/flags/flag_english.svg';
+import { useDarkMode } from '../app/context/DarkModeContext';
+import { useLanguage } from '@/app/context/LanguageContext';
 
 const Language = () => {
+  const { language, changeLanguage } = useLanguage();
+  const { isDarkMode } = useDarkMode();
+
   return (
-    <article className='flex flex-col gap-[1rem]'>
-      <div className='flex text-[1.2rem]'>
-        <div className=' w-[3.5rem] h-[3.5rem] flex justify-center items-center rounded-full absolute top-[13.5rem] right-[19.5rem] border lang-active'>
+    <article className='flex flex-col pt-[2rem]'>
+      <div className='flex text-[1.2rem] relative py-0'>
+        <button
+          className={` w-[3.25rem] h-[3.25rem] flex justify-center items-center rounded-full absolute left-[1.8rem] top-[-3.5rem]  pt-[0.25rem]  ${isDarkMode ? 'bg-zinc-800' : 'bg-white text-zinc-800 font-[800]'}  ${language === 'es' ? 'lang-active' : 'lang'}`}
+          onClick={() => changeLanguage('es')}
+        >
           ES
-        </div>
+        </button>
 
-        <div className='w-[3.5rem] h-[3.5rem] flex justify-center items-center rounded-full absolute top-[14.5rem] right-[15.5rem] border'>
-          CAT
-        </div>
+        <button
+          className={`w-[3.25rem] h-[3.25rem] flex justify-center items-center rounded-full left-[5.3rem] top-[-2rem] pt-[0.25rem] pr-[0.25rem] absolute ${isDarkMode ? 'bg-zinc-800' : 'bg-white text-zinc-800 font-[800]'} ${language === 'ca' ? 'lang-active' : 'lang'}`}
+          onClick={() => changeLanguage('ca')}
+        >
+          CA
+        </button>
 
-        <div className='w-[3.5rem] h-[3.5rem] flex justify-center items-center rounded-full absolute top-[18.2rem] right-[13.7rem] border'>
-          ENG
-        </div>
+        <button
+          className={`w-[3.25rem] h-[3.25rem] flex justify-center items-center rounded-full left-[7.1rem] top-[1.5rem] pt-[0.25rem] ${isDarkMode ? 'bg-zinc-800' : 'bg-white text-zinc-800 font-[800]'} absolute ${language === 'en' ? 'lang-active' : 'lang'} `}
+          onClick={() => changeLanguage('en')}
+        >
+          EN
+        </button>
       </div>
-      <div className='w-[7rem] h-[7rem] flex justify-center items-center  rounded-full overflow-hidden mr-[1.5rem]'>
-        <Image
-          src={español}
-          width={700}
-          alt='Español'
-          className='scale-[150%]'
-        />
+      <div
+        className={`w-[6.3rem] h-[6.3rem] bg-zinc-300 flex justify-center items-center rounded-full overflow-hidden mr-[1.5rem] shadow-inner ${isDarkMode ? 'shadow-md shadow-[var(--white)]' : ' shadow-md shadow-[var(--olive)]'}`}
+      >
+        {language === 'es' ? (
+          <Image src={es} width={700} alt='es' />
+        ) : language === 'ca' ? (
+          <Image src={ca} width={700} alt='Català' />
+        ) : (
+          <Image src={en} width={700} alt='en' />
+        )}
       </div>
     </article>
   );
