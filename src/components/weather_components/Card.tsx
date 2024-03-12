@@ -1,5 +1,6 @@
 'use client';
 import { useLanguage } from '@/app/context/LanguageContext';
+import { useDarkMode } from '@/app/context/DarkModeContext';
 import React from 'react';
 import { useState } from 'react';
 import moon from '../../assets/icons/moon.png';
@@ -19,6 +20,7 @@ import Image from 'next/image';
 
 const Card = (props: any) => {
   const { language } = useLanguage();
+  const { isDarkMode } = useDarkMode();
   const data = props.value; //stores props values in data
   const weatherItems = data.weather; //gets the values of weather
   const weatherDescription = Object.values(weatherItems)
@@ -180,7 +182,9 @@ const Card = (props: any) => {
   console.log(hours, weatherDescription);
   return (
     <div className=' h-[89%] w-[94.5%] weather__card border-rad mt-[-4.5rem] pt-[4rem] '>
-      <p className='text-[var(--black)] flex justify-center mt-[-2.2rem] mr-[18rem] text-[1.8rem] font-bold'>
+      <p
+        className={`flex justify-center mt-[-2.2rem] mr-[18rem] text-[1.8rem] font-bold  ${isDarkMode ? 'text-[var(--white)]' : 'text-[var(--black)]'}`}
+      >
         {language === 'es'
           ? 'El tiempo'
           : language === 'ca'
@@ -190,7 +194,7 @@ const Card = (props: any) => {
       {weatherArray.map((element, index) => (
         <ul className='text-center pt-[1.5rem]'>
           <li
-            className='text-[var(--black)] flex justify-center w-1/2 mt-[0rem] text-[1.8rem] font-normal text-center '
+            className={` flex justify-center w-1/2 mt-[0rem] text-[1.8rem] font-normal text-center ${isDarkMode ? 'text-[var(--white)]' : 'text-[var(--black)]'}`}
             key={index}
           >
             {element}
