@@ -1,0 +1,30 @@
+
+
+.weather__card {
+  /* background-image: url('../../assets/images/sunnyDay__bg.jpg'); */
+  background-position: bottom;
+}
+
+.shadow_filter {
+  filter: drop-shadow(0 0 2px var(--black));
+}
+
+.light_filter {
+  filter: drop-shadow(0 0 10px white);
+  /* width:20rem; */
+}
+
+.weather__icon {
+  box-shadow: -3px 0 20px 1px gray;
+}
+
+.weather__icon--day {
+  background-image: url('../../assets/images/sunnyDay__bg.jpg');
+  background-position: bottom;
+}
+
+.weather__icon--night {
+  background-image: url('../../assets/images/night.jpg');
+  background-size: cover;
+  /* background-position: contain; */
+}
