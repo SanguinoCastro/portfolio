@@ -427,8 +427,12 @@ section p {
   }
 }
 
-@media (max-width: 330px) {
+@media (max-width: 338px) {
   .about__containerBottom section {
     gap: 1rem;
+  }
+
+  footer p {
+    font-size: 1.4rem;
   }
 }

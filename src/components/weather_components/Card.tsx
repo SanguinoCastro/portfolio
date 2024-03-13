@@ -181,9 +181,9 @@ const Card = (props: any) => {
 
   console.log(hours, weatherDescription);
   return (
-    <div className=' h-[89%] w-[94.5%] weather__card border-rad mt-[-4.5rem] pt-[4rem] '>
+    <div className='weather__card h-[89%] w-[94.5%]  border-rad mt-[-4.5rem] pt-[3.2rem] '>
       <p
-        className={`flex justify-center mt-[-2.2rem] mr-[18rem] text-[1.8rem] font-bold  ${isDarkMode ? 'text-[var(--white)]' : 'text-[var(--black)]'}`}
+        className={`weather__title underline flex justify-center mt-[-1rem] mr-[18rem] text-[1.8rem] font-bold  ${isDarkMode ? 'text-[var(--white)]' : 'text-[var(--black)]'}`}
       >
         {language === 'es'
           ? 'El tiempo'
@@ -191,186 +191,180 @@ const Card = (props: any) => {
             ? 'El temps'
             : 'The weather'}
       </p>
-      {weatherArray.map((element, index) => (
-        <ul className='text-center pt-[1.5rem]'>
+      <ul className='weather__list pt-[1rem]'>
+        {weatherArray.map((element, index) => (
           <li
-            className={` flex justify-center w-1/2 mt-[0rem] text-[1.8rem] font-normal text-center ${isDarkMode ? 'text-[var(--white)]' : 'text-[var(--black)]'}`}
+            className={`weather__list--li flex justify-center w-1/2 mt-[0rem] text-[1.8rem] font-normal text-center ${isDarkMode ? 'text-[var(--white)]' : 'text-[var(--black)]'}`}
             key={index}
           >
             {element}
           </li>
-        </ul>
-      ))}
-      <p className='text-[var(--white)] flex justify-center mt-[-1.5rem] ml-[21.5rem] text-[1.8rem] text-white'>
-        {weatherForecast}
-        {unicode}
-      </p>
+        ))}
+      </ul>
+
       <div
-        className={`${isDay ? 'weather__icon--day' : 'weather__icon--night'} w-[45%] h-[20rem]  flex justify-center items-center mt-[-16rem] ml-[58%] weather__icon`}
+        className={` ${isDay ? 'weather__icon--day' : 'weather__icon--night'} w-[45%] h-[20rem]  flex justify-center items-center mt-[-15rem] ml-[58%] weather__icon`}
       >
-        {(weatherDescription === 'clear sky' && !isDay) ||
-        (weatherDescription === 'clear sky' && !isDay) ? (
-          <Image
-            src={moon}
-            width={55}
-            alt='weather-icon'
-            className={`${weatherDescription === 'clear sky' ? 'light_filter' : 'shadow_filter'} mt-[1rem]  shadow_filter`}
-          />
-        ) : (weatherDescription === 'clear sky' && isDay) ||
-          (weatherDescription === 'clear sky' && isDay) ? (
-          <Image
-            src={sun}
-            width={55}
-            alt='weather-icon'
-            className={`${weatherDescription === 'clear sky' ? 'light_filter' : 'shadow_filter'} mt-[1rem]  shadow_filter`}
-          />
-        ) : weatherDescription === 'broken clouds' ||
-          weatherDescription === 'overcast clouds' ? (
-          <Image
-            src={brokenClouds}
-            width={100}
-            alt='weather-icon'
-            className={` mt-[1rem]  shadow_filter`}
-          />
-        ) : weatherDescription === 'scattered clouds' ? (
-          <Image
-            src={cloud}
-            width={100}
-            alt='weather-icon'
-            className={` mt-[1rem]  shadow_filter`}
-          />
-        ) : weatherDescription === 'few clouds' && isDay ? (
-          <Image
-            src={cloudSun}
-            width={100}
-            alt='weather-icon'
-            className={`mt-[1rem]  shadow_filter`}
-          />
-        ) : weatherDescription === 'few clouds' && !isDay ? (
-          <Image
-            src={cloudMoon}
-            width={100}
-            alt='weather-icon'
-            className={`mt-[1rem]  shadow_filter`}
-          />
-        ) : (weatherDescription === 'rain' && isDay) ||
-          (weatherDescription === 'light rain' && isDay) ||
-          (weatherDescription === 'moderate rain' && isDay) ||
-          (weatherDescription === 'heavy intensity rain' && isDay) ||
-          (weatherDescription === 'very heavy rain' && isDay) ||
-          (weatherDescription === 'extreme rain' && isDay) ? (
-          <Image
-            src={rainSun}
-            width={90}
-            alt='weather-icon'
-            className={`mt-[1rem]  shadow_filter`}
-          />
-        ) : (weatherDescription === 'rain' && !isDay) ||
-          (weatherDescription === 'light rain' && !isDay) ||
-          (weatherDescription === 'moderate rain' && !isDay) ||
-          (weatherDescription === 'heavy intensity rain' && !isDay) ||
-          (weatherDescription === 'very heavy rain' && !isDay) ||
-          (weatherDescription === 'extreme rain' && !isDay) ? (
-          <Image
-            src={rainMoon}
-            width={90}
-            alt='weather-icon'
-            className={`mt-[1rem]  shadow_filter`}
-          />
-        ) : weatherDescription === 'thunderstorm' ||
-          weatherDescription === 'thunderstorm with light rain' ||
-          weatherDescription === 'thunderstorm with rain' ||
-          weatherDescription === 'thunderstorm with heavy rain' ||
-          weatherDescription === 'light thunderstorm' ||
-          weatherDescription === 'heavy thunderstorm' ||
-          weatherDescription === 'ragged thunderstorm' ||
-          weatherDescription === 'thunderstorm with light drizzle' ||
-          weatherDescription === 'thunderstorm with heavy drizzle' ? (
-          <Image
-            src={thunder}
-            width={100}
-            alt='weather-icon'
-            className={` mt-[1rem]  shadow_filter`}
-          />
-        ) : weatherDescription === 'snow' ||
-          weatherDescription === 'freezing rain' ||
-          weatherDescription === 'light snow' ||
-          weatherDescription === 'Heavy snow' ||
-          weatherDescription === 'sleet' ||
-          weatherDescription === 'light shower sleet' ||
-          weatherDescription === 'shower sleet' ||
-          weatherDescription === 'light rain and snow' ||
-          weatherDescription === 'rain and snow' ||
-          weatherDescription === 'light shower snow' ||
-          weatherDescription === 'shower snow' ||
-          weatherDescription === 'heavy shower snow' ? (
-          <Image
-            src={snow}
-            width={100}
-            alt='weather-icon'
-            className={` mt-[1rem]  shadow_filter`}
-          />
-        ) : weatherDescription === 'mist' ||
-          weatherDescription === 'smoke' ||
-          weatherDescription === 'haze' ||
-          weatherDescription === 'sand/dust whirls' ||
-          weatherDescription === 'fog' ||
-          weatherDescription === 'sand' ||
-          weatherDescription === 'dust' ||
-          weatherDescription === 'volcanic ash' ||
-          weatherDescription === 'squalls' ||
-          weatherDescription === 'tornado' ? (
-          <Image
-            src={mist}
-            width={100}
-            alt='weather-icon'
-            className={` mt-[1rem]  shadow_filter`}
-          />
-        ) : weatherDescription === 'shower rain' ||
-          'light intensity drizzle' ||
-          'drizzle' ||
-          'heavy intensity drizzle' ||
-          'light intensity drizzle rain' ||
-          'drizzle rain' ||
-          'heavy intensity drizzle rain' ||
-          'shower rain an drizzle' ||
-          'heavy shower rain and drizzle' ||
-          'shower drizzle' ||
-          'light intensity shower rain' ||
-          'heavy intensity shower rain' ||
-          'ragged shower rain' ? (
-          <Image
-            src={showerRain}
-            width={100}
-            alt='weather-icon'
-            className={` mt-[1rem]  shadow_filter`}
-          />
-        ) : (
-          <Image
-            src={nika}
-            width={90}
-            alt='weather-icon'
-            className={` mt-[1rem]  light_filter`}
-          />
-        )}
-
-        {/* <Image
-          src={url}
-          alt='weather-icon'
-          className={`${weatherDescription === 'clear sky' ? 'light_filter' : 'shadow_filter'} mt-[1rem]  shadow_filter`}
-        /> */}
+        <div className='weather__icon--image mt-[2rem]'>
+          {(weatherDescription === 'clear sky' && !isDay) ||
+          (weatherDescription === 'clear sky' && !isDay) ? (
+            <Image
+              src={moon}
+              width={55}
+              alt='weather-icon'
+              className={`${weatherDescription === 'clear sky' ? 'light_filter' : 'shadow_filter'} mt-[1rem]  shadow_filter`}
+            />
+          ) : (weatherDescription === 'clear sky' && isDay) ||
+            (weatherDescription === 'clear sky' && isDay) ? (
+            <Image
+              src={sun}
+              width={55}
+              alt='weather-icon'
+              className={`${weatherDescription === 'clear sky' ? 'light_filter' : 'shadow_filter'} mt-[1rem]  shadow_filter`}
+            />
+          ) : weatherDescription === 'broken clouds' ||
+            weatherDescription === 'overcast clouds' ? (
+            <Image
+              src={brokenClouds}
+              width={100}
+              alt='weather-icon'
+              className={` mt-[1rem]  shadow_filter`}
+            />
+          ) : weatherDescription === 'scattered clouds' ? (
+            <Image
+              src={cloud}
+              width={100}
+              alt='weather-icon'
+              className={` mt-[1rem]  shadow_filter`}
+            />
+          ) : weatherDescription === 'few clouds' && isDay ? (
+            <Image
+              src={cloudSun}
+              width={100}
+              alt='weather-icon'
+              className={`mt-[1rem]  shadow_filter`}
+            />
+          ) : weatherDescription === 'few clouds' && !isDay ? (
+            <Image
+              src={cloudMoon}
+              width={100}
+              alt='weather-icon'
+              className={`mt-[1rem]  shadow_filter`}
+            />
+          ) : (weatherDescription === 'rain' && isDay) ||
+            (weatherDescription === 'light rain' && isDay) ||
+            (weatherDescription === 'moderate rain' && isDay) ||
+            (weatherDescription === 'heavy intensity rain' && isDay) ||
+            (weatherDescription === 'very heavy rain' && isDay) ||
+            (weatherDescription === 'extreme rain' && isDay) ? (
+            <Image
+              src={rainSun}
+              width={90}
+              alt='weather-icon'
+              className={`mt-[1rem]  shadow_filter`}
+            />
+          ) : (weatherDescription === 'rain' && !isDay) ||
+            (weatherDescription === 'light rain' && !isDay) ||
+            (weatherDescription === 'moderate rain' && !isDay) ||
+            (weatherDescription === 'heavy intensity rain' && !isDay) ||
+            (weatherDescription === 'very heavy rain' && !isDay) ||
+            (weatherDescription === 'extreme rain' && !isDay) ? (
+            <Image
+              src={rainMoon}
+              width={90}
+              alt='weather-icon'
+              className={`mt-[1rem]  shadow_filter`}
+            />
+          ) : weatherDescription === 'thunderstorm' ||
+            weatherDescription === 'thunderstorm with light rain' ||
+            weatherDescription === 'thunderstorm with rain' ||
+            weatherDescription === 'thunderstorm with heavy rain' ||
+            weatherDescription === 'light thunderstorm' ||
+            weatherDescription === 'heavy thunderstorm' ||
+            weatherDescription === 'ragged thunderstorm' ||
+            weatherDescription === 'thunderstorm with light drizzle' ||
+            weatherDescription === 'thunderstorm with heavy drizzle' ? (
+            <Image
+              src={thunder}
+              width={100}
+              alt='weather-icon'
+              className={` mt-[1rem]  shadow_filter`}
+            />
+          ) : weatherDescription === 'snow' ||
+            weatherDescription === 'freezing rain' ||
+            weatherDescription === 'light snow' ||
+            weatherDescription === 'Heavy snow' ||
+            weatherDescription === 'sleet' ||
+            weatherDescription === 'light shower sleet' ||
+            weatherDescription === 'shower sleet' ||
+            weatherDescription === 'light rain and snow' ||
+            weatherDescription === 'rain and snow' ||
+            weatherDescription === 'light shower snow' ||
+            weatherDescription === 'shower snow' ||
+            weatherDescription === 'heavy shower snow' ? (
+            <Image
+              src={snow}
+              width={100}
+              alt='weather-icon'
+              className={` mt-[1rem]  shadow_filter`}
+            />
+          ) : weatherDescription === 'mist' ||
+            weatherDescription === 'smoke' ||
+            weatherDescription === 'haze' ||
+            weatherDescription === 'sand/dust whirls' ||
+            weatherDescription === 'fog' ||
+            weatherDescription === 'sand' ||
+            weatherDescription === 'dust' ||
+            weatherDescription === 'volcanic ash' ||
+            weatherDescription === 'squalls' ||
+            weatherDescription === 'tornado' ? (
+            <Image
+              src={mist}
+              width={100}
+              alt='weather-icon'
+              className={` mt-[1rem]  shadow_filter`}
+            />
+          ) : weatherDescription === 'shower rain' ||
+            'light intensity drizzle' ||
+            'drizzle' ||
+            'heavy intensity drizzle' ||
+            'light intensity drizzle rain' ||
+            'drizzle rain' ||
+            'heavy intensity drizzle rain' ||
+            'shower rain an drizzle' ||
+            'heavy shower rain and drizzle' ||
+            'shower drizzle' ||
+            'light intensity shower rain' ||
+            'heavy intensity shower rain' ||
+            'ragged shower rain' ? (
+            <Image
+              src={showerRain}
+              width={100}
+              alt='weather-icon'
+              className={` mt-[1rem]  shadow_filter`}
+            />
+          ) : (
+            <Image
+              src={nika}
+              width={90}
+              alt='weather-icon'
+              className={` mt-[1rem]  light_filter`}
+            />
+          )}
+          <p className='weather__temperature text-[var(--white)] flex justify-center text-[1.8rem] mt-[-2rem] text-white'>
+            {weatherForecast}
+            {unicode}
+          </p>
+        </div>
       </div>
-
-      {/* </Box>
-      <Text
-      className='text-[var(--white)] flex justify-center mt-[0.5rem] text-[2rem]'
-      >
-        Weather
-      </Text>
-      <Text className='text-[var(--white)] flex justify-center mt-[5rem]'>
-        Current Weather
-      </Text> */}
     </div>
   );
 };
 export default Card;
+
+{
+  /* <p className='weather__temperature text-[var(--white)] flex justify-center mt-[-1.5rem] ml-[21.5rem] text-[1.8rem] text-white'>
+        {weatherForecast}
+        {unicode}
+      </p> */
+}
