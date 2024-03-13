@@ -1,4 +1,3 @@
-
 import About from './About';
 import Dark_Mode from './Dark_Mode';
 import Language from './Language';
@@ -21,12 +20,10 @@ const Bento = () => {
         Dado
       </div>
       <div className='grid__map col-start-1 col-end-3 content shadow border-rad flex justify-center items-center p-[1rem]'>
-        
         <Map />
-        
       </div>
       <div className='grid__weather col-start-3 col-end-5 content shadow border-rad'>
-        <Weather/>
+        <Weather />
       </div>
       <div className='grid__projects col-start-1 col-end-7 row-start-4 row-end-5 content shadow border-rad'>
         Trabajos y Proyectos

@@ -9,14 +9,14 @@ import About__button from './About__button';
 const About = () => {
   return (
     <article className='h-full w-full p-[2rem] flex flex-col justify-center items-center gap-[2rem]'>
-      <div className=' flex justify-center items-center gap-[5rem]'>
-        <section className='min-w-[20rem]'>
+      <div className='about__containerUp  flex justify-center items-center gap-[5rem]'>
+        <section className='about__avatar min-w-[20rem]'>
           {' '}
           <Image src={avatar} width={200} alt='Avatar' priority={true} />{' '}
         </section>
         <About__text />
       </div>
-      <div className=' flex justify-center items-center mt-[1rem] ml-[16.5rem]'>
+      <div className=' about__containerBottom flex justify-center items-center mt-[1rem] ml-[16.5rem]'>
         <section className='flex justify-center items-center gap-[2rem]'>
           <About__button />
           <Link href={'#'}>

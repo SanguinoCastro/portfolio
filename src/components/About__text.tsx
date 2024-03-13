@@ -5,7 +5,7 @@ import { useLanguage } from '@/app/context/LanguageContext';
 const About__text = () => {
   const { language } = useLanguage();
   return (
-    <section className='text-left w-[100%] pr-[8rem]'>
+    <section className='about__text text-left w-[100%] pr-[8rem]'>
       <h3>
         <span className='capital'>E</span>duard{' '}
         <span className='capital'>S</span>anguino
@@ -15,7 +15,8 @@ const About__text = () => {
       {language === 'es' ? (
         <>
           <p>
-            ¡Hola! Soy un Geek entusiasta, especializado en desarrollo Frontend con tecnologías como React y Next.
+            ¡Hola! Soy un Geek entusiasta, especializado en desarrollo Frontend
+            con tecnologías como React y Next.
           </p>
           <br />
           <p>

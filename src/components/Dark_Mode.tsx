@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
-import {useDarkMode} from '../app/context/DarkModeContext';
+import { useDarkMode } from '../app/context/DarkModeContext';
 import moon from '../assets/icons/moon.png';
 import sun from '../assets/icons/sun.png';
 
@@ -21,8 +21,7 @@ const Dark_Mode = () => {
   //   (!storedThemePreference && isDarkModePreferred);
 
   // Creación del useState que controlara el modo css y sus estilos
-  let {isDarkMode, toggleDarkMode}= useDarkMode();
-
+  let { isDarkMode, toggleDarkMode } = useDarkMode();
 
   useEffect(() => {
     const body = document.body;
@@ -57,13 +56,13 @@ const Dark_Mode = () => {
       >
         <div className='sun-moon'>
           {isDarkMode ? (
-            <Image src={moon} width={400} alt='Modo oscuro' />
+            <Image src={moon} width={400} alt='Modo oscuro' className='moon' />
           ) : (
             <Image
               src={sun}
               width={500}
               alt='Modo claro'
-              className='w-[20rem]'
+              className='w-[20rem] sun'
             />
           )}
         </div>

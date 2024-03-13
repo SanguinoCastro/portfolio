@@ -173,6 +173,14 @@ section p {
   line-height: 1.8rem;
 }
 
+.burger-menu-content a {
+  text-decoration: none;
+}
+
+.burger-menu-content a:hover {
+  font-weight: bold;
+}
+
 .content {
   display: flex;
   justify-content: center;
@@ -193,6 +201,234 @@ section p {
   overflow: hidden;
 }
 
+.nav__collapse {
+  display: none;
+}
+
 .grid__container {
   grid-template-rows: 2fr 2fr 2fr 12fr 1.5fr 3fr 3fr 1.5fr;
+}
+
+/* Media queries */
+
+@media (max-width: 1211px) {
+  .main__container {
+    width: 80rem;
+    max-width: 95%;
+  }
+
+  .grid__container {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-rows: 2.5fr 2.5fr 2fr 2fr 12fr 1.5fr 2fr 3fr 1.5fr;
+  }
+
+  .grid__me {
+    grid-column-start: 1;
+    grid-column-end: 6;
+  }
+
+  .grid__theme {
+    grid-column-start: 6;
+    grid-column-end: 7;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+
+  .grid__lang {
+    grid-column-start: 6;
+    grid-column-end: 7;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+
+  .grid__dice {
+    grid-column-start: 4;
+    grid-column-end: 7;
+    grid-row-start: 4;
+    grid-row-end: 5;
+  }
+
+  .grid__map {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 5;
+  }
+
+  .grid__weather {
+    grid-column-start: 4;
+    grid-column-end: 7;
+    grid-row-start: 3;
+    grid-row-end: 4;
+  }
+  .grid__projects {
+    grid-column-start: 1;
+    grid-column-end: 7;
+    grid-row-start: 5;
+    grid-row-end: 6;
+  }
+
+  .grid__animation {
+    grid-row-start: 7;
+    grid-row-end: 8;
+  }
+
+  .grid__form {
+    grid-row-start: 8;
+    grid-row-end: 10;
+  }
+}
+
+@media (max-width: 817px) {
+  .content__header {
+    height: 7rem;
+    overflow: visible;
+  }
+
+  .main__container {
+    width: 50rem;
+    max-width: 95%;
+  }
+
+  .nav__full {
+    display: none;
+  }
+
+  .nav__collapse {
+    display: block;
+  }
+
+  .grid__container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: 1.5fr 8fr 2fr 2fr 12fr 1.5fr 2fr 4fr 1.5fr;
+  }
+
+  .grid__me {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+
+  .about__containerUp {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .about__avatar {
+    padding-top: 0rem;
+  }
+
+  .about__text {
+    padding-right: 0;
+  }
+
+  .about__containerBottom {
+    margin-left: 0;
+    margin-top: 0;
+  }
+
+  .grid__theme {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+
+  .grid__lang {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+
+  .grid__dice {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 5;
+  }
+
+  .grid__map {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 5;
+  }
+
+  .grid__weather {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+  }
+  .grid__projects {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 5;
+    grid-row-end: 6;
+  }
+
+  .grid__skills {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .grid__animation {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 7;
+    grid-row-end: 8;
+  }
+
+  .grid__form {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 8;
+    grid-row-end: 9;
+  }
+
+  .grid__contact {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 9;
+    grid-row-end: 10;
+  }
+
+  .grid__cv {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 9;
+    grid-row-end: 10;
+  }
+}
+
+@media (max-width: 520px) {
+  .content__header {
+    padding: 0 2rem;
+  }
+  .content__header div {
+    gap: 1.5rem;
+    margin-right: 1rem;
+  }
+
+  .grid__container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: 1.5fr 9fr 2fr 2fr 12fr 1.5fr 2fr 4fr 1.5fr;
+  }
+  .about__avatar {
+    padding-top: 0rem;
+  }
+}
+
+@media (max-width: 390px) {
+  .content__header {
+    height: 9rem;
+  }
+}
+
+@media (max-width: 330px) {
+  .about__containerBottom section {
+    gap: 1rem;
+  }
 }
