@@ -13,6 +13,7 @@ const Map = () => {
         allowFullScreen
         loading='lazy'
         referrerPolicy='no-referrer-when-downgrade'
+        className='map__frame'
       />
       <Image
         src={gps}
