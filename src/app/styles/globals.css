@@ -209,6 +209,18 @@ section p {
   grid-template-rows: 2fr 2fr 2fr 12fr 1.5fr 3fr 3fr 1.5fr;
 }
 
+.linkedin,
+.github {
+  transition: all 500ms;
+}
+
+.github:hover {
+  transform: scale(110%);
+}
+.linkedin:hover {
+  transform: scale(110%);
+}
+
 /* Media queries */
 
 @media (max-width: 1211px) {
