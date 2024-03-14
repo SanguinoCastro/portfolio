@@ -5,7 +5,7 @@ import { useLanguage } from '@/app/context/LanguageContext';
 const About__text = () => {
   const { language } = useLanguage();
   return (
-    <section className='text-left w-[100%]'>
+    <section className='about__text text-left w-[100%] pr-[8rem]'>
       <h3>
         <span className='capital'>E</span>duard{' '}
         <span className='capital'>S</span>anguino
@@ -15,9 +15,8 @@ const About__text = () => {
       {language === 'es' ? (
         <>
           <p>
-            ¡Hola! Soy un Geek entusiasta, decidí arriesgarme a un cambio de
-            profesión para dedicarme a lo que realmente me apasiona, la
-            programación.
+            ¡Hola! Soy un Geek entusiasta, especializado en desarrollo Frontend
+            con tecnologías como React y Next.
           </p>
           <br />
           <p>
@@ -25,10 +24,10 @@ const About__text = () => {
             a nada.
           </p>
           <br />
-          <p>
+          {/* <p>
             Si buscas a alguien con ojo al detalle y dedicación no dudes en
             contactarme para realiza tu proyecto.
-          </p>
+          </p> */}
         </>
       ) : language === 'ca' ? (
         <>
@@ -43,10 +42,10 @@ const About__text = () => {
             tinc por a res.
           </p>
           <br />
-          <p>
+          {/* <p>
             Si busques algú amb ull per al detall i dedicació, no dubtis a
             contactar-me per realitzar el teu projecte.
-          </p>
+          </p> */}
         </>
       ) : (
         <>
@@ -61,10 +60,10 @@ const About__text = () => {
             of anything.
           </p>
           <br />
-          <p>
+          {/* <p>
             If you're looking for someone with an eye for detail and dedication,
             don't hesitate to contact me to carry out your project.
-          </p>
+          </p> */}
         </>
       )}
     </section>

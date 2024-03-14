@@ -1,7 +1,4 @@
-
-
 .weather__card {
-  /* background-image: url('../../assets/images/sunnyDay__bg.jpg'); */
   background-position: bottom;
 }
 
@@ -27,4 +24,124 @@
   background-image: url('../../assets/images/night.jpg');
   background-size: cover;
   /* background-position: contain; */
+}
+
+/* Mediaquerys */
+@media (max-width: 840px) {
+  .weather__icon--image {
+    margin-top: -1rem;
+  }
+}
+
+@media (max-width: 817px) {
+  .weather__input {
+    margin-top: -4.3rem;
+  }
+
+  .weather__input--camp {
+    margin-right: -10.5%;
+  }
+
+  .weather__card {
+    margin-top: -9rem;
+  }
+
+  .weather__title {
+    margin-top: 2rem;
+    margin-right: 10rem;
+    font-size: 1.6rem;
+  }
+
+  .weather__list--li {
+    font-size: 1.6rem;
+    margin-left: 0.5rem;
+  }
+
+  .weather__icon--image {
+    transform: scale(75%);
+    margin-top: 1rem;
+  }
+
+  /* .weather__temperature {
+    margin-top: -2rem;
+    margin-left: 15rem;
+  } */
+}
+
+@media (max-width: 525px) {
+  .weather__input--camp {
+    margin-right: -8.5%;
+    width: 30%;
+    height: 2.3rem;
+    margin-top: 0.1rem;
+    font-size: 1.2rem;
+  }
+  .weather__input--btn {
+    margin-right: 5%;
+    width: 2rem;
+  }
+  .weather__title {
+    margin-top: 2rem;
+    margin-right: 10rem;
+    font-size: 1.4rem;
+  }
+
+  .weather__list--li {
+    text-align: left;
+    display: flex;
+    justify-content: start;
+    font-size: 1.4rem;
+    margin-left: 0.5rem;
+    text-align: left;
+  }
+
+  .weather__icon {
+    width: 48%;
+    margin-left: 54.6%;
+  }
+
+  .weather__icon--image {
+    transform: scale(60%);
+    margin-top: 2rem;
+  }
+
+  .weather__temperature {
+    transform: scale(170%);
+    margin-top: 0.5rem;
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 379px) {
+  .weather__title {
+    width: 56%;
+    margin-left: -0.3rem;
+    font-size: 1.4rem;
+  }
+
+  .weather__list {
+    width: 56%;
+    margin-right: 0;
+    margin-left: -0.3rem;
+    padding-top: 0;
+    margin-top: -0.5rem;
+  }
+
+  .weather__list--li {
+    font-size: 1.4rem;
+    margin-left: 0.5rem;
+    text-align: left;
+    margin-top: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (max-width: 339px) {
+  .weather__title {
+    font-size: 1.2rem;
+    font-weight: normal;
+  }
+  .weather__list--li {
+    font-size: 1.2rem;
+  }
 }

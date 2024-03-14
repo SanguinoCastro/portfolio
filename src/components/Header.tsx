@@ -1,11 +1,12 @@
 'use client';
 import { useLanguage } from '@/app/context/LanguageContext';
+import NavbarCollapse from './NavbarCollapse';
 
 const Header: React.FC = () => {
   const { language } = useLanguage();
 
   return (
-    <header className='content shadow w-full h-[5.2rem] flex px-[5rem] !justify-between items-center   border-rad'>
+    <header className='content__header content shadow w-full h-[5.2rem] flex px-[5rem] !justify-between items-center   border-rad overflow-auto'>
       <div className='flex items-center gap-10'>
         <h3 className='capital'>ES</h3>
         {language === 'es' ? (
@@ -28,8 +29,8 @@ const Header: React.FC = () => {
           </p>
         )}
       </div>
-
-      <nav>
+      <NavbarCollapse />
+      <nav className='nav__full'>
         <ul className='flex justify-between gap-10 text-[1.8rem] ml-[5rem]'>
           <li>
             <a href='#'>

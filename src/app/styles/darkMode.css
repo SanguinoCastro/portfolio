@@ -79,3 +79,38 @@ body.light .content {
 body.light .capital {
   color: var(--valencia);
 }
+
+/* MediaQuerys */
+
+@media (max-width: 1211px) {
+  .darkMode__label {
+    margin: 0 1rem;
+  }
+}
+
+@media (max-width: 349px) {
+  .sun-moon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .moon,
+  .sun {
+    transform: scale(110%);
+  }
+
+  .moon {
+    margin-right: 1.5rem;
+  }
+
+  #toggle-button:checked + label .sun-moon {
+    transform: translateX(-8.5rem) scale(125%);
+  }
+
+  .darkMode__label {
+    margin: 0 2rem;
+    width: 12rem;
+    height: 3.5rem;
+  }
+}

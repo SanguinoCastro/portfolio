@@ -5,6 +5,7 @@ import './styles/globals.css';
 import './styles/darkMode.css';
 import './styles/language.css';
 import './styles/weather.css';
+import './styles/map.css';
 
 // const inter = Inter({ subsets: ['latin'] });
 
@@ -21,12 +22,16 @@ export default function RootLayout({
   return (
     <html lang='es'>
       <head>
-        {/* <link
+        <link
           rel='preload'
           href='./assets/fonts/Strawford/Strawford_Regular.ttf'
           as='font'
           type='font/ttf'
-        /> */}
+        />
+        <link
+          rel='font'
+          href='./assets/fonts/Strawford/Strawford_Regular.ttf'
+        />
       </head>
       <body>{children}</body>
     </html>

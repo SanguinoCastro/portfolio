@@ -9,7 +9,7 @@ export default function Home() {
     <DarkModeProvider>
       <LanguageProvider>
         <main className='flex justify-center  mt-[5rem]'>
-          <div className='main__container center max-w-[113.5rem] w-[80%]  flex flex-col justify-between'>
+          <div className='main__container center w-[113.5rem] flex flex-col justify-between'>
             <Header />
             <Bento />
             <Footer />

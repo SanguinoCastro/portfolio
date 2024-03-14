@@ -5,7 +5,7 @@
   transition: all 0.4s;
 }
 
-.lang{
+.lang {
   transition: all 0.4s;
   border: 1px solid var(--olive);
 }
@@ -17,16 +17,28 @@
   scale: 110%;
 }
 
-{/* <div className='w-[98px] h-[99px] relative'>
-        <div className='w-[27px] h-[27px] left-[53px] top-[15px] absolute bg-zinc-300 rounded-full' />
+/* MediaQuerys */
 
-        <div className='w-[27px] h-[27px] left-[71px] top-[45px] absolute bg-zinc-300 rounded-full' />
+@media (max-width: 817px) {
+  .lang__bubble {
+    transform: scale(80%);
+  }
 
-        <div className='w-[27px] h-[27px] left-[18px] top-0 absolute bg-zinc-300 rounded-full' />
+  .language__es {
+    top: -1.5rem;
+    left: 4.7rem;
+  }
+  .language__ca {
+    top: 1.7rem;
+    left: 6rem;
+  }
 
-        <div className='w-[63px] h-[63px] left-0 top-[36px] absolute rounded-[100px] shadow-inner'>
+  .language__en {
+    top: 5rem;
+    left: 4.7rem;
+  }
 
-          <div className='w-[22.83px] h-[22.62px] left-[2.91px] top-[18.85px] absolute'></div>
-          
-        </div>
-      </div> */}
+  .language__flag {
+    margin-bottom: 2.6rem;
+  }
+}
