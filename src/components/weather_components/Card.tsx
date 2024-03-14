@@ -204,7 +204,7 @@ const Card = (props: any) => {
       </ul>
 
       <div
-        className={` ${isDay ? 'weather__icon--day' : 'weather__icon--night'} w-[45%] h-[20rem]  flex justify-center items-center mt-[-15rem] ml-[58%] weather__icon`}
+        className={` ${isDay ? 'weather__icon--day' : 'weather__icon--night'} w-[45%] h-[21rem]  flex justify-center items-center mt-[-15rem] ml-[58%] weather__icon`}
       >
         <div className='weather__icon--image mt-[2rem]'>
           {(weatherDescription === 'clear sky' && !isDay) ||
