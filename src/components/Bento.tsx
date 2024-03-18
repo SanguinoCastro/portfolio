@@ -2,6 +2,7 @@ import About from './About';
 import Dark_Mode from './Dark_Mode';
 import Language from './Language';
 import Map from './Map';
+import Projects from './Projects';
 import Weather from './Weather';
 
 const Bento = () => {
@@ -26,7 +27,7 @@ const Bento = () => {
         <Weather />
       </div>
       <div className='grid__projects col-start-1 col-end-7 row-start-4 row-end-5 content shadow border-rad'>
-        Trabajos y Proyectos
+        <Projects />
       </div>
       <div className='grid__skills col-start-1 col-end-7 content shadow border-rad'>
         Skills

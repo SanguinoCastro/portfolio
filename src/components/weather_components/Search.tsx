@@ -59,11 +59,11 @@ const Search = () => {
 
   return (
     <div className='w-full h-full border-rad flex flex-col items-center justify-center'>
-      <div className='w-full flex justify-center z-10'>
+      <div className='w-full flex justify-center z-[0]'>
         <div className='weather__input flex w-full  justify-end pr-[0.5rem]'>
           <input
             className='weather__input--camp border border-r-0 border-[var(--olive)] w-[40%] mr-[-7%] rounded-l text-center pr-[2.5rem] h-[2.5rem] text-[1.4rem]  opacity-60 text-[var(--black)]'
-            placeholder={`${language === 'es' ? 'Busca' : language === 'ca' ? 'Busca' : 'Search'}`}
+            placeholder={`${language === 'es' ? 'Ciudad' : language === 'ca' ? 'Ciutat' : 'City'}`}
             onChange={(e) => setSearchValue(e.target.value)}
             onKeyDown={handleKeyPress}
           />

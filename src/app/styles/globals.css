@@ -36,6 +36,7 @@
   --capital: #d2f891;
   --white: #ffff;
   --black: #111111;
+  --bg-transparent: rgba(17, 17, 17, 0.8);
   --light-0: #f8f9fa;
   --light-1: #e9ecef;
   --light-2: #dee2e6;
@@ -92,6 +93,10 @@
 
 .capital {
   color: var(--capital);
+}
+
+.iframe {
+  overflow: hidden;
 }
 
 /** Custom CSS **/
@@ -154,12 +159,14 @@ img {
   max-width: 100%;
 }
 
-button {
+button,
+.button {
   box-shadow: 0px 6px 11px 0px rgba(255, 255, 255, 0.21) inset;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
-button:active {
+button:active,
+.button:active {
   box-shadow: 0px 6px 11px 0px rgba(0, 0, 0, 0.25) inset;
   filter: drop-shadow(0px 4px 4px rgba(55, 255, 255, 0.21));
 }
@@ -206,7 +213,7 @@ section p {
 }
 
 .grid__container {
-  grid-template-rows: 2fr 2fr 2fr 12fr 1.5fr 3fr 3fr 1.5fr;
+  grid-template-rows: 2fr 2fr 1.3fr 4fr 1.5fr 3fr 3fr 1.5fr;
 }
 
 .linkedin,
