@@ -21,7 +21,7 @@ const Projects__card = ({
   link: string;
   text: ReactNode;
 }) => {
-  const [open, setOpen] = useState(true); // Cambiar a false tras el diseño
+  const [open, setOpen] = useState(false); // Cambiar a false tras el diseño
 
   const toggleVisor = () => {
     setOpen(!open);
