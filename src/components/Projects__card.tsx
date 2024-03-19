@@ -56,7 +56,7 @@ const Projects__card = ({
             ))}
           </div>
           <div className='content__description  p-[1.5rem] flex'>
-            <p>{description}</p>
+            <p className='text-[var(--white)]'>{description}</p>
             <button
               className='self-end text-[1.4rem] w-[5rem] shadow-none transition-all hover:underline hover:scale-110'
               onClick={toggleVisor}

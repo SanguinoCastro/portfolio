@@ -24,10 +24,6 @@ const About__text = () => {
             a nada.
           </p>
           <br />
-          {/* <p>
-            Si buscas a alguien con ojo al detalle y dedicación no dudes en
-            contactarme para realiza tu proyecto.
-          </p> */}
         </>
       ) : language === 'ca' ? (
         <>
@@ -42,10 +38,6 @@ const About__text = () => {
             tinc por a res.
           </p>
           <br />
-          {/* <p>
-            Si busques algú amb ull per al detall i dedicació, no dubtis a
-            contactar-me per realitzar el teu projecte.
-          </p> */}
         </>
       ) : (
         <>
@@ -60,10 +52,6 @@ const About__text = () => {
             of anything.
           </p>
           <br />
-          {/* <p>
-            If you're looking for someone with an eye for detail and dedication,
-            don't hesitate to contact me to carry out your project.
-          </p> */}
         </>
       )}
     </section>
