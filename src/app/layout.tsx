@@ -6,6 +6,7 @@ import './styles/darkMode.css';
 import './styles/language.css';
 import './styles/weather.css';
 import './styles/map.css';
+import './styles/projects.css';
 
 // const inter = Inter({ subsets: ['latin'] });
 
