@@ -3,6 +3,7 @@ import Dark_Mode from './Dark_Mode';
 import Language from './Language';
 import Map from './Map';
 import Projects from './Projects';
+import Skills from './Skills';
 import Weather from './Weather';
 
 const Bento = () => {
@@ -30,7 +31,7 @@ const Bento = () => {
         <Projects />
       </div>
       <div className='grid__skills col-start-1 col-end-7 content shadow border-rad'>
-        Skills
+        <Skills />
       </div>
       <div className='grid__animation col-start-1 col-end-7 content shadow border-rad'>
         Animación
