@@ -44,7 +44,7 @@ const Projects__card = ({
           />
         </div>
         <div className='card__content  h-full grid grid-rows-2 bg-[var(--primary)]'>
-          <div className='content__technologies  flex justify-around items-center'>
+          <div className='flex justify-around items-center'>
             {tech.map((icon, index) => (
               <Image
                 key={index}

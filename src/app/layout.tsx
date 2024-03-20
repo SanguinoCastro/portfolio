@@ -7,6 +7,7 @@ import './styles/language.css';
 import './styles/weather.css';
 import './styles/map.css';
 import './styles/projects.css';
+import './styles/skills.css';
 
 // const inter = Inter({ subsets: ['latin'] });
 
