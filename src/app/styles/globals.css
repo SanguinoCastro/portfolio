@@ -214,7 +214,7 @@ section p {
 }
 
 .grid__container {
-  grid-template-rows: 2fr 2fr 1.3fr 4fr 1.5fr 3fr 3fr 1.5fr;
+  grid-template-rows: 2fr 2fr 1.3fr 4fr 1fr 3fr 3fr 1.5fr;
 }
 
 .linkedin,
@@ -320,7 +320,7 @@ section p {
 
   .grid__container {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    grid-template-rows: 1.5fr 8fr 2fr 2fr 12fr 1.5fr 2fr 4fr 1.5fr;
+    grid-template-rows: 1.5fr 8fr 2fr 2fr 12fr 3fr 2fr 4fr 1.5fr;
   }
 
   .grid__me {
@@ -434,10 +434,16 @@ section p {
 
   .grid__container {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    grid-template-rows: 1.5fr 9fr 2fr 2fr 12fr 1.5fr 2fr 4fr 1.5fr;
+    grid-template-rows: 1.5fr 9fr 2fr 2fr 12fr 2.5fr 2fr 4fr 1.5fr;
   }
   .about__avatar {
     padding-top: 0rem;
+  }
+}
+
+@media (max-width: 449px) {
+  .grid__container {
+    grid-template-rows: 1.5fr 9fr 2fr 2fr 12fr 3.5fr 2fr 4fr 1.5fr;
   }
 }
 
@@ -454,5 +460,11 @@ section p {
 
   footer p {
     font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 307px) {
+  .grid__container {
+    grid-template-rows: 1.5fr 9fr 2fr 2fr 12fr 4.5fr 2fr 4fr 1.5fr;
   }
 }
