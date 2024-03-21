@@ -80,6 +80,10 @@ body.light .capital {
   color: var(--valencia);
 }
 
+body.light .input {
+  background-color: #ffff;
+}
+
 /* MediaQuerys */
 
 @media (max-width: 1211px) {
