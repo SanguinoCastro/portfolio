@@ -1,5 +1,6 @@
 import About from './About';
 import ContactForm from './ContactForm';
+import CV from './CV';
 import Dark_Mode from './Dark_Mode';
 import Language from './Language';
 import Map from './Map';
@@ -44,7 +45,7 @@ const Bento = () => {
         <ContactForm />
       </div>
       <div className='grid__cv col-start-1 col-end-3 content shadow border-rad'>
-        CV
+        <CV />
       </div>
     </div>
   );
