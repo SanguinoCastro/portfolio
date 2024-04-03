@@ -33,7 +33,7 @@ const Projects__card = ({
     }
   };
   return (
-    <section className='grid__jobs grid grid-cols-1 w-full h-[80%]  justify-center items-center'>
+    <section className='grid__jobs grid grid-cols-1 w-full h-[80%] mt-[-1.6rem] justify-center items-center'>
       <article className='grid__article w-[34rem] h-[34rem] m-auto   grid grid-rows-2 shadow'>
         <div className='card__image  h-full overflow-hidden'>
           <Image

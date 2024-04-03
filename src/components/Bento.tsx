@@ -1,16 +1,19 @@
 import About from './About';
+import Animation from './Animation';
 import ContactForm from './ContactForm';
 import CV from './CV';
 import Dark_Mode from './Dark_Mode';
+import Dice from './Dice';
 import Language from './Language';
 import Map from './Map';
 import Projects from './Projects';
 import Skills from './Skills';
 import Weather from './Weather';
+import Whatsapp from './Whatsapp';
 
 const Bento = () => {
   return (
-    <div className='grid__container  w-full h-[241.8rem] grid grid-cols-6  gap-[2rem] mt-[2rem]'>
+    <div className='grid__container  w-full h-[192.5rem] grid grid-cols-6  gap-[2rem] mt-[2rem]'>
       <div className='grid__me content shadow border-rad col-start-1 col-end-5 row-start-1 row-end-3'>
         <About />
       </div>
@@ -21,7 +24,7 @@ const Bento = () => {
         <Language />
       </div>
       <div className='grid__dice col-start-5 col-end-7 row-start-2 row-end-4 content shadow border-rad'>
-        Dado
+        <Dice />
       </div>
       <div className='grid__map col-start-1 col-end-3 content shadow border-rad flex justify-center items-center p-[1rem]'>
         <Map />
@@ -36,10 +39,10 @@ const Bento = () => {
         <Skills />
       </div>
       <div className='grid__animation col-start-1 col-end-7 content shadow border-rad'>
-        Animación
+        <Animation />
       </div>
       <div className='grid__contact col-start-1 col-end-3 content shadow border-rad'>
-        Contacto
+        <Whatsapp />
       </div>
       <div className='grid__form col-start-3 col-end-7 row-start-7 row-end-9 content shadow border-rad'>
         <ContactForm />

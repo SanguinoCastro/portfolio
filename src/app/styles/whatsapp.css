@@ -1,0 +1,14 @@
+@media (max-width: 817px) {
+  .buttons__text {
+    display: none;
+  }
+
+  .buttons__icons {
+    display: flex;
+  }
+
+  .whatsapp__button,
+  .gmail__button {
+    width: 90%;
+  }
+}

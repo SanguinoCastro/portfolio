@@ -27,6 +27,38 @@
 }
 
 /* Mediaquerys */
+
+@media (max-width: 1211px) {
+  .weather__icon--image {
+    margin-top: -2rem;
+  }
+  .clear--sun {
+    margin-top: 3rem;
+  }
+  .clear--moon {
+    margin-top: 9rem;
+  }
+  .cloud--sun {
+    margin-top: 2rem;
+  }
+  .cloud--moon {
+    margin-top: 7rem;
+  }
+  .rain--sun {
+    margin-top: 2rem;
+  }
+  .rain--moon {
+    margin-top: 8rem;
+  }
+  .showerRain {
+    margin-top: 7rem;
+  }
+  .nika {
+    margin-top: 3rem;
+    margin-bottom: -1rem;
+    scale: 95%;
+  }
+}
 @media (max-width: 840px) {
   .weather__icon--image {
     margin-top: -1rem;

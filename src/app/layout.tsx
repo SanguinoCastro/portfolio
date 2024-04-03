@@ -10,6 +10,8 @@ import './styles/projects.css';
 import './styles/skills.css';
 import './styles/contactForm.css';
 import './styles/cv.css';
+import './styles/whatsapp.css';
+import './styles/dice.css';
 
 // const inter = Inter({ subsets: ['latin'] });
 

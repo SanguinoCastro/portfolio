@@ -35,10 +35,10 @@ const Header: React.FC = () => {
           <li>
             <a href='#'>
               {language === 'es'
-                ? 'Proyectos'
+                ? 'Trabajos'
                 : language === 'ca'
-                  ? 'Projectes'
-                  : 'Projects'}
+                  ? 'Treballs'
+                  : 'Works'}
             </a>
           </li>
           <li>

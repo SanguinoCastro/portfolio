@@ -19,6 +19,12 @@
 
 /* MediaQuerys */
 
+@media (max-width: 1211px) {
+  .language__flag {
+    transform: scale(125%);
+  }
+}
+
 @media (max-width: 817px) {
   .lang__bubble {
     transform: scale(80%);

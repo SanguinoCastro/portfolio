@@ -74,7 +74,7 @@ const ContactForm = () => {
       <form
         action='https://formspree.io/f/mnqegdpk'
         method='POST'
-        className='contact__form flex flex-col justify-center items-center   w-[35rem] h-full gap-[1rem]'
+        className='contact__form flex flex-col justify-center items-center mt-[1.2rem]  w-[35rem] h-full gap-[1.1rem]'
       >
         {/* <label htmlFor='email'>Email</label> */}
         <input
@@ -92,7 +92,7 @@ const ContactForm = () => {
           className={`input input__message h-[15rem] w-[35rem] rounded-xl p-[1rem] text-[1.6rem] bg-[var(--secondary-input)] border-[0.2rem] border-[var(--secondary-border)]`}
           name='message'
           id='message'
-          placeholder={`${language === 'es' ? '*Mensaje' : language === 'ca' ? '*Missatge' : 'Message'}`}
+          placeholder={`${language === 'es' ? 'Mensaje*' : language === 'ca' ? 'Missatge*' : 'Message*'}`}
           value={emailData.message}
           onChange={handleChange}
           required

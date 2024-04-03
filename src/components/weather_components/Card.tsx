@@ -213,7 +213,7 @@ const Card = (props: any) => {
               src={moon}
               width={55}
               alt='weather-icon'
-              className={`${weatherDescription === 'clear sky' ? 'light_filter' : 'shadow_filter'} mt-[1rem]  shadow_filter`}
+              className={`clear--moon ${weatherDescription === 'clear sky' ? 'light_filter' : 'shadow_filter'} mt-[1rem]  shadow_filter`}
             />
           ) : (weatherDescription === 'clear sky' && isDay) ||
             (weatherDescription === 'clear sky' && isDay) ? (
@@ -221,7 +221,7 @@ const Card = (props: any) => {
               src={sun}
               width={55}
               alt='weather-icon'
-              className={`${weatherDescription === 'clear sky' ? 'light_filter' : 'shadow_filter'} mt-[1rem]  shadow_filter`}
+              className={`clear--sun ${weatherDescription === 'clear sky' ? 'light_filter' : 'shadow_filter'} mt-[1rem]  shadow_filter`}
             />
           ) : weatherDescription === 'broken clouds' ||
             weatherDescription === 'overcast clouds' ? (
@@ -229,28 +229,28 @@ const Card = (props: any) => {
               src={brokenClouds}
               width={100}
               alt='weather-icon'
-              className={` mt-[1rem] mb-[-2rem] shadow_filter`}
+              className={`brokenClouds mt-[1rem] mb-[-2rem] shadow_filter`}
             />
           ) : weatherDescription === 'scattered clouds' ? (
             <Image
               src={cloud}
               width={100}
               alt='weather-icon'
-              className={` mt-[1rem] mb-[-2rem] shadow_filter`}
+              className={`cloud mt-[1rem] mb-[-2rem] shadow_filter`}
             />
           ) : weatherDescription === 'few clouds' && isDay ? (
             <Image
               src={cloudSun}
               width={100}
               alt='weather-icon'
-              className={`mt-[1rem] mb-[-2rem] shadow_filter`}
+              className={`cloud--sun mt-[1rem] mb-[-2rem] shadow_filter`}
             />
           ) : weatherDescription === 'few clouds' && !isDay ? (
             <Image
               src={cloudMoon}
               width={100}
               alt='weather-icon'
-              className={`mt-[1rem] mb-[-2rem] shadow_filter`}
+              className={`cloud--moon mt-[1rem] mb-[-2rem] shadow_filter`}
             />
           ) : (weatherDescription === 'rain' && isDay) ||
             (weatherDescription === 'light rain' && isDay) ||
@@ -262,7 +262,7 @@ const Card = (props: any) => {
               src={rainSun}
               width={90}
               alt='weather-icon'
-              className={`mt-[1rem] mb-[-1.5rem] shadow_filter`}
+              className={`rain--sun mt-[1rem] mb-[-1.5rem] shadow_filter`}
             />
           ) : (weatherDescription === 'rain' && !isDay) ||
             (weatherDescription === 'light rain' && !isDay) ||
@@ -274,7 +274,7 @@ const Card = (props: any) => {
               src={rainMoon}
               width={90}
               alt='weather-icon'
-              className={`mt-[1rem] mb-[-1.5rem] shadow_filter`}
+              className={`rain--moon mt-[1rem] mb-[-1.5rem] shadow_filter`}
             />
           ) : weatherDescription === 'thunderstorm' ||
             weatherDescription === 'thunderstorm with light rain' ||
@@ -289,7 +289,7 @@ const Card = (props: any) => {
               src={thunder}
               width={100}
               alt='weather-icon'
-              className={` mt-[1rem] mb-[-2rem] shadow_filter`}
+              className={`thunder mt-[1rem] mb-[-2rem] shadow_filter`}
             />
           ) : weatherDescription === 'snow' ||
             weatherDescription === 'freezing rain' ||
@@ -307,7 +307,7 @@ const Card = (props: any) => {
               src={snow}
               width={100}
               alt='weather-icon'
-              className={` mt-[1rem] mb-[-2rem] shadow_filter`}
+              className={`snow mt-[1rem] mb-[-2rem] shadow_filter`}
             />
           ) : weatherDescription === 'mist' ||
             weatherDescription === 'smoke' ||
@@ -323,14 +323,14 @@ const Card = (props: any) => {
               src={mist}
               width={100}
               alt='weather-icon'
-              className={` mt-[1rem] mb-[-2rem] shadow_filter`}
+              className={`mist mt-[1rem] mb-[-2rem] shadow_filter`}
             />
           ) : weatherDescription === 'Nika' ? (
             <Image
               src={nika}
               width={90}
               alt='weather-icon'
-              className={` mt-[1rem]  light_filter`}
+              className={`nika mt-[1rem]  light_filter`}
             />
           ) : weatherDescription === 'shower rain' ||
             'light intensity drizzle' ||
@@ -349,7 +349,7 @@ const Card = (props: any) => {
               src={showerRain}
               width={100}
               alt='weather-icon'
-              className={` mt-[1rem] mb-[-2rem] shadow_filter`}
+              className={`showerRain mt-[1rem] mb-[-2rem] shadow_filter`}
             />
           ) : (
             ''
