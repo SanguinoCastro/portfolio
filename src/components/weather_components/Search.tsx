@@ -38,7 +38,7 @@ const Search = () => {
   const handleClick = () => {
     axios
       .get(
-        `http://api.openweathermap.org/data/2.5/weather?q=${searchValue}&appid=7b23f2ded4201982388034f2abecb1f5&units=metric`
+        `https://api.openweathermap.org/data/2.5/weather?q=${searchValue}&appid=7b23f2ded4201982388034f2abecb1f5&units=metric`
       )
       .then((res) => {
         setWeather(res.data);
