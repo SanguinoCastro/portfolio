@@ -96,9 +96,7 @@ const ContactForm = () => {
           value={emailData.message}
           onChange={handleChange}
           required
-        >
-          {' '}
-        </textarea>
+        />
 
         <div className='input__privacity flex gap-4'>
           <input type='checkbox' name='privacity' id='privacity' required />
