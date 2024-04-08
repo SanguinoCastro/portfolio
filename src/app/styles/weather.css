@@ -1,0 +1,139 @@
+.weather__card {
+  background-position: bottom;
+}
+
+.shadow_filter {
+  filter: drop-shadow(0 0 2px var(--black));
+}
+
+.light_filter {
+  filter: drop-shadow(0 0 10px white);
+}
+
+.weather__icon {
+  box-shadow: -3px 0 20px 1px gray;
+}
+
+.weather__icon--day {
+  background-image: url('../../assets/images/sunnyDay__bg.jpg');
+  background-position: bottom;
+}
+
+.weather__icon--night {
+  background-image: url('../../assets/images/night.jpg');
+  background-size: cover;
+  /* background-position: contain; */
+}
+
+/* Mediaquerys */
+
+@media (max-width: 1211px) {
+  .weather__icon--image {
+    margin-top: -2rem;
+  }
+  .clear--sun {
+    margin-top: 8rem;
+  }
+  .clear--moon {
+    margin-top: 9rem;
+  }
+  .cloud--sun,
+  .cloud--moon,
+  .rain--sun,
+  .rain--moon,
+  .thunder,
+  .showerRain {
+    margin-top: 7rem;
+  }
+  .brokenClouds,
+  .cloud,
+  .snow,
+  .mist {
+    margin-top: 6rem;
+  }
+  .nika {
+    margin-top: 3rem;
+    margin-bottom: -1rem;
+    scale: 95%;
+  }
+}
+
+@media (max-width: 840px) {
+  .weather__icon--image {
+    margin-top: -1rem;
+  }
+}
+
+@media (max-width: 817px) {
+  .weather__input {
+    margin-top: -4.3rem;
+  }
+  .weather__input--camp {
+    margin-right: -5.1%;
+  }
+  .weather__card {
+    margin-top: -9rem;
+  }
+  .weather__title {
+    margin-top: 2rem;
+    margin-right: 46%;
+    font-size: 1.6rem;
+  }
+  .weather__list--li {
+    font-size: 1.6rem;
+    margin-left: 0.5rem;
+  }
+  .weather__icon--image {
+    transform: scale(75%);
+    margin-top: 4rem;
+  }
+  .clear--sun,
+  .clear--moon {
+    margin-top: 2rem;
+  }
+
+  .brokenClouds,
+  .cloud,
+  .snow,
+  .mist {
+    margin-top: -1.5rem;
+  }
+  .cloud--sun,
+  .thunder {
+    margin-top: 0;
+    margin-bottom: -3rem;
+  }
+
+  .showerRain {
+    margin-top: 0;
+  }
+  .cloud--moon {
+    margin-top: 1.9rem;
+  }
+  .rain--sun {
+    margin-top: 0.5rem;
+  }
+  .rain--moon {
+    margin-top: 0.5rem;
+  }
+}
+
+@media (max-width: 505px) {
+  .weather__input--camp {
+    margin-right: -1.5rem;
+    margin-left: 2rem;
+    width: 35%;
+    height: 2.3rem;
+    margin-top: 0.1rem;
+    font-size: 1.2rem;
+  }
+  .weather__input--btn {
+    margin-right: 1.5rem;
+    width: 2rem;
+  }
+  .weather__icon {
+    width: 48%;
+    margin-left: 54.6%;
+    margin-top: -15.3rem;
+  }
+}

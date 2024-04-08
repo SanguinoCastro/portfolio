@@ -1,0 +1,31 @@
+.skills_icon {
+  height: 5rem;
+  width: auto;
+}
+
+/* MwediaQuerys */
+
+@media (max-width: 817px) {
+  /* .skills_icon {
+    height: 10rem;
+    width: auto;
+  } */
+
+  .content__technologies {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 324px) {
+  .content__technologies {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+}
