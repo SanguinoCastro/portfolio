@@ -180,7 +180,7 @@ const Card = (props: any) => {
   });
 
   console.log(hours, weatherDescription);
-  weatherDescription = 'drizzle';
+  // weatherDescription = 'drizzle';
   return (
     <div className='weather__card h-[89%] w-[94.5%]  border-rad mt-[-4.5rem] pt-[3.2rem] '>
       <p

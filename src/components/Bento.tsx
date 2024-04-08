@@ -13,7 +13,7 @@ import Whatsapp from './Whatsapp';
 
 const Bento = () => {
   return (
-    <div className='grid__container  w-full h-[192.5rem] grid grid-cols-6  gap-[2rem] mt-[2rem]'>
+    <div className='grid__container  w-full h-[194rem] grid grid-cols-6  gap-[2rem] mt-[2rem]'>
       <div className='grid__me content shadow border-rad col-start-1 col-end-5 row-start-1 row-end-3'>
         <About />
       </div>
