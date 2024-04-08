@@ -22,9 +22,11 @@ const Map = () => {
         className='map__gps absolute animate-bounce  cursor-pointer'
         onClick={() => {
           if (typeof window === 'undefined') return;
-          window.open(
-            'https://www.google.com/maps/place/Calella,+Barcelona/@41.6121313,2.6553533,17z/data=!3m1!4b1!4m5!3m4!1s0x12bb39b04518c207:0x56ef369d70456b28!8m2!3d41.6121313!4d2.6575423'
-          );
+          if (typeof window !== 'undefined') {
+            window.open(
+              'https://www.google.com/maps/place/Calella,+Barcelona/@41.6121313,2.6553533,17z/data=!3m1!4b1!4m5!3m4!1s0x12bb39b04518c207:0x56ef369d70456b28!8m2!3d41.6121313!4d2.6575423'
+            );
+          }
         }}
       />
     </article>

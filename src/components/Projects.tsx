@@ -13,7 +13,6 @@ import { useState } from 'react';
 import Cintelec from './projects_info/Cintelec';
 
 const Projects = () => {
-  console.log(open);
   const { language } = useLanguage();
   return (
     <div className='w-full h-full text-left p-[2rem]'>

@@ -7,8 +7,10 @@ import gmailImg from '../assets/icons/Gmail.svg';
 const Whatsapp = () => {
   const handleWhatsapp = () => {
     if (typeof window === 'undefined') return;
-    const whatsappUrl = `whatsapp://send?phone=34689739030`;
-    window.open(whatsappUrl);
+    if (typeof window !== 'undefined') {
+      const whatsappUrl = `whatsapp://send?phone=34689739030`;
+      window.open(whatsappUrl);
+    }
   };
   const handleGmail = () => {
     if (typeof window === 'undefined') return;
