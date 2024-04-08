@@ -4,6 +4,7 @@ import React, { useEffect } from 'react';
 
 const Animation = () => {
   useEffect(() => {
+    if (typeof window === 'undefined') return;
     const el = document.getElementById('animation');
 
     const handleMouseMove = (e: MouseEvent) => {
