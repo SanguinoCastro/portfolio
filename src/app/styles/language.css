@@ -31,17 +31,23 @@
   }
 
   .language__es {
-    top: -1.5rem;
-    left: 4.7rem;
+    margin-top: 2rem;
+    margin-left: 3.3rem;
+    /* top: -1.5rem;
+    left: 4.7rem; */
   }
   .language__ca {
-    top: 1.7rem;
-    left: 6rem;
+    margin-top: 3.7rem;
+    margin-left: 1rem;
+    /* top: 1.7rem;
+    left: 6rem; */
   }
 
   .language__en {
-    top: 5rem;
-    left: 4.7rem;
+    margin-top: 3.5rem;
+    margin-left: -2rem;
+    /* top: 5rem;
+    left: 4.7rem; */
   }
 
   .language__flag {
