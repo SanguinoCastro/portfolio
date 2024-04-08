@@ -14,9 +14,13 @@ const Animation = () => {
 
       const { layerX, layerY } = e;
 
-      const yRotation = ((layerX - clientWidth / 2) / clientWidth) * 20;
+      const rect = el.getBoundingClientRect();
+      const offsetX = e.clientX - rect.left;
+      const offsetY = e.clientY - rect.top;
 
-      const xRotation = ((layerY - clientHeight / 2) / clientHeight) * 20;
+      const yRotation = ((offsetX - clientWidth / 2) / clientWidth) * 20;
+
+      const xRotation = ((offsetY - clientHeight / 2) / clientHeight) * 20;
 
       const transformString = `perspective(500px) scale(1.1) rotateX(${xRotation}deg) rotateY(${yRotation}deg)`;
 
