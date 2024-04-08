@@ -48,7 +48,7 @@ export default function RootLayout({
         <DarkModeProvider>
           <LanguageProvider>
             <main className='flex justify-center  mt-[2rem]'>
-              <div className='main__container center w-[113.5rem] h-full flex flex-col justify-between'>
+              <div className='main__container center w-[113.5rem] flex flex-col justify-between'>
                 {children}
                 <Footer />
               </div>
