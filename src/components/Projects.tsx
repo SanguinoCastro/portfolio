@@ -1,6 +1,6 @@
 'use client';
 import { useLanguage } from '@/app/context/LanguageContext';
-import cintelec from '../assets/images/cintelec.png';
+import cintelec from '../assets/images/Cintelec.png';
 import next from '../assets/icons/Next_white.png';
 import typescript from '../assets/icons/Typescript--white.svg';
 import tailwind from '../assets/icons/Tailwind--white.svg';
