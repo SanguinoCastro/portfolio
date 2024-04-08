@@ -36,6 +36,7 @@ const Search = () => {
     }
   }, [isData]);
 
+  console.log(isData);
   const handleClick = () => {
     const err = axios
       .get(
