@@ -12,8 +12,6 @@ const Animation = () => {
       if (!el) return;
       const { clientHeight, clientWidth } = el;
 
-      const { layerX, layerY } = e;
-
       const rect = el.getBoundingClientRect();
       const offsetX = e.clientX - rect.left;
       const offsetY = e.clientY - rect.top;
