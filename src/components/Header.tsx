@@ -15,6 +15,7 @@ const Header: React.FC = () => {
       const targetElement = document.querySelector(targetId);
 
       if (targetElement) {
+        if (typeof window === 'undefined') return;
         const rect = targetElement.getBoundingClientRect();
         window.scrollTo({
           top: rect.top + window.scrollY,

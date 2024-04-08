@@ -16,6 +16,7 @@ const Header__privacity: React.FC = () => {
 
       if (targetElement) {
         const rect = targetElement.getBoundingClientRect();
+        if (typeof window === 'undefined') return;
         window.scrollTo({
           top: rect.top + window.scrollY,
           behavior: 'smooth',
