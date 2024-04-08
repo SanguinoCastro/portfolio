@@ -1,0 +1,22 @@
+#animation {
+  height: 96%;
+  width: 99%;
+  transition:
+    box-shadow 0.1s,
+    transform 0.1s background;
+  background: url('../../assets/images/imagen2.png') no-repeat center;
+  background-size: cover;
+}
+
+#animation:hover {
+  box-shadow: 0 0 5rem rgba(0, 0, 0, 1);
+}
+
+@media (max-width: 1211px) {
+  /* .animation {
+    width: 100%;
+  } */
+  .content__animation {
+    width: 100%;
+  }
+}

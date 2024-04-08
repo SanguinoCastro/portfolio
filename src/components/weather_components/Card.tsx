@@ -180,17 +180,17 @@ const Card = (props: any) => {
   });
 
   console.log(hours, weatherDescription);
-  // weatherDescription = 'Nika';
+  weatherDescription = 'drizzle';
   return (
     <div className='weather__card h-[89%] w-[94.5%]  border-rad mt-[-4.5rem] pt-[3.2rem] '>
       <p
-        className={`weather__title underline flex justify-center mt-[-1rem] mr-[18rem] text-[1.8rem] font-bold  ${isDarkMode ? 'text-[var(--white)]' : 'text-[var(--black)]'}`}
+        className={`weather__title  flex justify-center mt-[-1rem] mr-[17rem] text-[1.8rem]  ${isDarkMode ? 'text-[var(--white)]' : 'text-[var(--black)]'}`}
       >
         {language === 'es'
-          ? 'El tiempo'
+          ? 'EL TIEMPO'
           : language === 'ca'
-            ? 'El temps'
-            : 'The weather'}
+            ? 'EL TEMPS'
+            : 'THE WEATHER'}
       </p>
       <ul className='weather__list pt-[1rem]'>
         {weatherArray.map((element, index) => (
@@ -229,7 +229,7 @@ const Card = (props: any) => {
               src={brokenClouds}
               width={100}
               alt='weather-icon'
-              className={`brokenClouds mt-[1rem] mb-[-2rem] shadow_filter`}
+              className={`brokenClouds mt-[-1rem] mb-[-2rem] shadow_filter`}
             />
           ) : weatherDescription === 'scattered clouds' ? (
             <Image

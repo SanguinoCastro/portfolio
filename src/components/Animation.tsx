@@ -1,16 +1,45 @@
+'use client';
 import Image from 'next/image';
 import image2 from '../assets/images/imagen2.png';
 
+import React, { useEffect } from 'react';
+
 const Animation = () => {
-  return (
-    <div className='content__animation flex justify-center items-center px-[0.9rem] overflow-hidden'>
-      <Image
-        src={image2}
-        alt='dice'
-        width={1110}
-        className='border-rad inner__shadow w-[100%]'
-      />
-    </div>
-  );
+  useEffect(() => {
+    const el = document.getElementById('animation');
+
+    const handleMouseMove = (e: MouseEvent) => {
+      if (!el) return;
+      const { clientHeight, clientWidth } = el;
+
+      const { layerX, layerY } = e;
+
+      const yRotation = ((layerX - clientWidth / 2) / clientWidth) * 20;
+
+      const xRotation = ((layerY - clientHeight / 2) / clientHeight) * 20;
+
+      const transformString = `perspective(500px) scale(1.1) rotateX(${xRotation}deg) rotateY(${yRotation}deg)`;
+
+      el.style.transform = transformString;
+    };
+
+    const handleMouseOut = () => {
+      if (!el) return;
+      el.style.transform = 'perspective(500px) scale(1) rotateX(0) rotateY(0)';
+    };
+
+    if (el) {
+      el.addEventListener('mousemove', handleMouseMove);
+      el.addEventListener('mouseout', handleMouseOut);
+
+      return () => {
+        el.removeEventListener('mousemove', handleMouseMove);
+        el.removeEventListener('mouseout', handleMouseOut);
+      };
+    }
+  }, []);
+
+  return <div id='animation' className='border-rad'></div>;
 };
+
 export default Animation;

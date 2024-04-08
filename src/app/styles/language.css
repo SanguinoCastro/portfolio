@@ -46,5 +46,6 @@
 
   .language__flag {
     margin-bottom: 2.6rem;
+    scale: 80%;
   }
 }

@@ -17,7 +17,7 @@ const Projects = () => {
   const { language } = useLanguage();
   return (
     <div className='w-full h-full text-left p-[2rem]'>
-      <h1>
+      <h1 id='projects'>
         <span className='capital font-bold'>T</span>rabajos:
       </h1>
 

@@ -19,13 +19,15 @@
   }
 
   .contact__form,
-  .input,
-  .input__button {
+  .input {
     width: 27rem;
+  }
+  .input__button {
+    height: 5rem;
   }
 
   .input__message {
-    height: 10rem;
+    height: 7rem;
   }
 }
 
@@ -37,8 +39,6 @@
   .input,
   .input__button {
     width: 25rem;
-    height: 3rem;
-    font-size: 1.4rem;
   }
 
   .input__message {
@@ -94,7 +94,7 @@
   }
 
   .input__message {
-    height: 6rem;
+    height: 10rem;
   }
 
   .input__error {

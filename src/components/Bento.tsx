@@ -23,7 +23,7 @@ const Bento = () => {
       <div className='grid__lang content shadow border-rad'>
         <Language />
       </div>
-      <div className='grid__dice col-start-5 col-end-7 row-start-2 row-end-4 content shadow border-rad'>
+      <div className='grid__dice col-start-5 col-end-7 row-start-2 row-end-4 content shadow border-rad !overflow-visible'>
         <Dice />
       </div>
       <div className='grid__map col-start-1 col-end-3 content shadow border-rad flex justify-center items-center p-[1rem]'>
@@ -38,7 +38,7 @@ const Bento = () => {
       <div className='grid__skills col-start-1 col-end-7 content shadow border-rad'>
         <Skills />
       </div>
-      <div className='grid__animation col-start-1 col-end-7 content shadow border-rad'>
+      <div className='grid__animation col-start-1 col-end-7 content shadow border-rad !overflow-visible'>
         <Animation />
       </div>
       <div className='grid__contact col-start-1 col-end-3 content shadow border-rad'>

@@ -12,6 +12,11 @@ import './styles/contactForm.css';
 import './styles/cv.css';
 import './styles/whatsapp.css';
 import './styles/dice.css';
+import './styles/privacity.css';
+import './styles/animation.css';
+import { DarkModeProvider } from './context/DarkModeContext';
+import Footer from '@/components/Footer';
+import { LanguageProvider } from './context/LanguageContext';
 
 // const inter = Inter({ subsets: ['latin'] });
 
@@ -39,7 +44,18 @@ export default function RootLayout({
           href='./assets/fonts/Strawford/Strawford_Regular.ttf'
         />
       </head>
-      <body>{children}</body>
+      <body>
+        <DarkModeProvider>
+          <LanguageProvider>
+            <main className='flex justify-center  mt-[5rem]'>
+              <div className='main__container center w-[113.5rem] flex flex-col justify-between'>
+                {children}
+                <Footer />
+              </div>
+            </main>
+          </LanguageProvider>
+        </DarkModeProvider>
+      </body>
     </html>
   );
 }

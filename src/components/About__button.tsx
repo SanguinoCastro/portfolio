@@ -5,7 +5,15 @@ import { useLanguage } from '@/app/context/LanguageContext';
 const About__button = () => {
   const { language } = useLanguage();
   return (
-    <button className='olive w-[25.3rem] h-[5rem] border-rad text-[1.8rem] transition-all duration-300'>
+    <button
+      onClick={() => {
+        const contactSection = document.getElementById('contact');
+        if (contactSection) {
+          contactSection.scrollIntoView({ behavior: 'smooth' });
+        }
+      }}
+      className='olive w-[25.3rem] h-[5rem] border-rad text-[1.8rem] transition-all duration-300'
+    >
       {language === 'es' ? (
         <>¡Contáctame!</>
       ) : language === 'ca' ? (

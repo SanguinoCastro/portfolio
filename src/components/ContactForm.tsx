@@ -5,8 +5,8 @@ import { useLanguage } from '@/app/context/LanguageContext';
 
 const ContactForm = () => {
   const { language } = useLanguage();
-  const [state, handleSubmit] = useForm('mnqegdpk');
-  const [errorMail, setErrorMail] = useState('');
+  const [state] = useForm('mnqegdpk');
+  const [errorMail] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
   const [error, setError] = useState('');
   const [emailData, setEmailData] = useState({
@@ -44,7 +44,7 @@ const ContactForm = () => {
       <div className='contact__title w-1/2 h-full flex flex-col text-left gap-[3rem]'>
         {language === 'es' ? (
           <>
-            <h1 className='contact__title__h1'>
+            <h1 className='contact__title__h1' id='contact'>
               <span className='capital font-bold'>C</span>ontacto
             </h1>
             <p className='w-3/4 contact__title__p'>
@@ -81,7 +81,7 @@ const ContactForm = () => {
           type='email'
           name='email'
           id='email'
-          placeholder='Email*'
+          placeholder='*Email'
           className={`input input__email w-[35rem] h-[4rem] rounded-xl p-[1rem] text-[1.6rem] bg-[var(--secondary-input)] border-[0.2rem] border-[var(--secondary-border)]`}
           pattern='^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
           required
@@ -92,7 +92,7 @@ const ContactForm = () => {
           className={`input input__message h-[15rem] w-[35rem] rounded-xl p-[1rem] text-[1.6rem] bg-[var(--secondary-input)] border-[0.2rem] border-[var(--secondary-border)]`}
           name='message'
           id='message'
-          placeholder={`${language === 'es' ? 'Mensaje*' : language === 'ca' ? 'Missatge*' : 'Message*'}`}
+          placeholder={`${language === 'es' ? '*Mensaje' : language === 'ca' ? '*Missatge' : '*Message'}`}
           value={emailData.message}
           onChange={handleChange}
           required
@@ -100,6 +100,19 @@ const ContactForm = () => {
           {' '}
         </textarea>
 
+        <div className='input__privacity flex gap-4'>
+          <input type='checkbox' name='privacity' id='privacity' required />
+          <label htmlFor='privacity' className='privacity__label text-[1.4rem]'>
+            *Acepto la{' '}
+            <a
+              href='/privacity'
+              target='_blank'
+              className='text-[var(--olive)] underline'
+            >
+              política de privacidad
+            </a>
+          </label>
+        </div>
         <ValidationError
           prefix='Message'
           field='message'
@@ -108,7 +121,7 @@ const ContactForm = () => {
 
         <button
           type={`${error == 'Por favor, indícame en qué te puedo ayudar' || error == "Si us plau, indica'm en què et puc ajudar." || error == 'Please, let me know how I can help you.' ? 'button' : 'submit'}`}
-          className={`input__button olive rounded-xl w-[35rem] h-[5rem] text-[2rem] mb-[-1rem] ${error == 'Por favor, indícame en qué te puedo ayudar' && 'disabled'}`}
+          className={`input__button olive rounded-xl w-[35rem] h-[8rem] text-[2rem] mb-[-1rem] ${error == 'Por favor, indícame en qué te puedo ayudar' && 'disabled'}`}
         >
           {language === 'es'
             ? 'Enviar mensaje'

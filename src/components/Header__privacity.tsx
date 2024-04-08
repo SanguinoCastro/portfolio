@@ -2,7 +2,7 @@
 import { useLanguage } from '@/app/context/LanguageContext';
 import NavbarCollapse from './NavbarCollapse';
 
-const Header: React.FC = () => {
+const Header__privacity: React.FC = () => {
   const { language } = useLanguage();
 
   const handleSmoothScroll = (
@@ -48,30 +48,7 @@ const Header: React.FC = () => {
           </p>
         )}
       </div>
-      <NavbarCollapse />
-      <nav className='nav__full'>
-        <ul className='flex justify-between gap-10 text-[1.8rem] ml-[5rem]'>
-          <li>
-            <a href='#projects' onClick={handleSmoothScroll}>
-              {language === 'es'
-                ? 'Trabajos'
-                : language === 'ca'
-                  ? 'Treballs'
-                  : 'Works'}
-            </a>
-          </li>
-          <li>
-            <a href='#contact' onClick={handleSmoothScroll}>
-              {language === 'es'
-                ? 'Contacto'
-                : language === 'ca'
-                  ? 'Contacte'
-                  : 'Contact'}
-            </a>
-          </li>
-        </ul>
-      </nav>
     </header>
   );
 };
-export default Header;
+export default Header__privacity;

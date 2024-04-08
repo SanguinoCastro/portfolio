@@ -5,10 +5,29 @@
 
   .buttons__icons {
     display: flex;
+    width: 100%;
+    gap: 10%;
   }
 
   .whatsapp__button,
   .gmail__button {
-    width: 90%;
+    width: 6rem;
+    padding: 0;
+  }
+
+  .whatsapp__icon,
+  .gmail__icon {
+    width: 100%;
+  }
+}
+
+@media (max-width: 350px) {
+  .buttons__icons {
+    justify-content: space-around;
+    gap: 0%;
+  }
+  .whatsapp__button,
+  .gmail__button {
+    width: 5rem;
   }
 }
