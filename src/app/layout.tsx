@@ -14,6 +14,7 @@ import './styles/whatsapp.css';
 import './styles/dice.css';
 import './styles/privacity.css';
 import './styles/animation.css';
+
 import { DarkModeProvider } from './context/DarkModeContext';
 import Footer from '@/components/Footer';
 import { LanguageProvider } from './context/LanguageContext';
@@ -22,7 +23,8 @@ import { LanguageProvider } from './context/LanguageContext';
 
 export const metadata: Metadata = {
   title: 'Portfolio',
-  description: 'Portfolio personal Eduard Sanguino',
+  description:
+    'Portfolio personal Eduard Sanguino front end developer de webs y aplicaciones',
 };
 
 export default function RootLayout({
@@ -33,6 +35,12 @@ export default function RootLayout({
   return (
     <html lang='es'>
       <head>
+        <link
+          rel='shortcut icon'
+          href='favicon.ico'
+          type='image/x-icon'
+          sizes='64x64'
+        />
         <link
           rel='preload'
           href='./assets/fonts/Strawford/Strawford_Regular.ttf'
