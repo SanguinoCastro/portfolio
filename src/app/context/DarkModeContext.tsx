@@ -27,44 +27,40 @@ interface DarkModeProviderProps {
 export const DarkModeProvider: React.FC<DarkModeProviderProps> = ({
   children,
 }) => {
-  // Comprobamos cuál es la preferencia de modo del usuario:
-  if (typeof window === 'undefined') return;
+  // Leer la preferencia de tema guardada o detectar la preferencia del sistema
+  const storedThemePreference =
+    typeof window !== 'undefined'
+      ? localStorage.getItem('themePreference')
+      : null;
   const isDarkModePreferred = window.matchMedia(
     '(prefers-color-scheme: dark)'
   ).matches;
 
-  // Comprobamos si hay una preferencia guardada en el localStorage:
-  const storedThemePreference = localStorage.getItem('themePreference');
+  // Establecer el estado inicial del tema
+  const [isDarkMode, setIsDarkMode] = useState(() => {
+    if (storedThemePreference !== null) {
+      return storedThemePreference === 'true';
+    }
+    return isDarkModePreferred;
+  });
 
-  // Establecemos el modo inicial en el que se cargará la web, tomando de referencia
-  // primero si hay configuración guardada en el local storage y sino toma la preferencia del navegador/sistema Operativo:
-  const initialDarkMode =
-    storedThemePreference === 'true' ||
-    (!storedThemePreference && isDarkModePreferred);
-
-  const [isDarkMode, setIsDarkMode] = useState(initialDarkMode);
-
+  // Guardar el estado del tema en localStorage
   useEffect(() => {
-    if (typeof window === 'undefined') return;
-    const isDarkModePreferred = window.matchMedia(
-      '(prefers-color-scheme: dark)'
-    ).matches;
-    const storedThemePreference = localStorage.getItem('themePreference');
-    const initialDarkMode =
-      storedThemePreference === 'true' ||
-      (!storedThemePreference && isDarkModePreferred);
-    setIsDarkMode(initialDarkMode);
-  }, []);
+    localStorage.setItem('themePreference', isDarkMode.toString());
+  }, [isDarkMode]);
 
+  // Función para alternar el tema
   const toggleDarkMode = () => {
     setIsDarkMode((prevMode) => !prevMode);
   };
 
+  // Valor del contexto
   const value: DarkModeContextType = {
     isDarkMode,
     toggleDarkMode,
   };
 
+  // Renderizar el proveedor de contexto
   return (
     <DarkModeContext.Provider value={value}>
       {children}

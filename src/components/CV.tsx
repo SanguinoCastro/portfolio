@@ -7,7 +7,7 @@ import download from '../assets/icons/download.svg';
 const CV = () => {
   const { language } = useLanguage();
   const handleDownloadCV = () => {
-    const cvUrl = 'src/assets/cv/EduardSanguinoCastro_CV.pdf';
+    const cvUrl = '/EduardSanguinoCastro_CV.pdf';
     const link = document.createElement('a');
     link.href = cvUrl;
     link.download = 'EduardSanguinoCastro_CV.pdf';

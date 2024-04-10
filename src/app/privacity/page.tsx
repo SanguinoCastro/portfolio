@@ -21,7 +21,7 @@ const page = () => {
   return (
     <>
       <Header__privacity />
-      <div className='flex justify-center p-[2rem]'>
+      <div className='flex justify-center py-[2rem]'>
         <Privacity__text />
       </div>
     </>

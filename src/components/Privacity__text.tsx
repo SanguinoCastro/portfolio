@@ -3,7 +3,7 @@ import { useLanguage } from '@/app/context/LanguageContext';
 const Privacity__text = () => {
   const { language } = useLanguage();
   return (
-    <div className='content content__privacity max-w-[100rem] w-[90%] border-rad flex flex-col py-[5rem] pb-[10rem] px-[10%]  !items-start !text-left'>
+    <div className='content content__privacity w-[100%] border-rad flex flex-col py-[5rem] pb-[10rem] px-[10%]  !items-start !text-left'>
       {language === 'es' ? (
         <>
           <h2>
