@@ -27,7 +27,21 @@ interface DarkModeProviderProps {
 export const DarkModeProvider: React.FC<DarkModeProviderProps> = ({
   children,
 }) => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  // Comprobamos cuál es la preferencia de modo del usuario:
+  const isDarkModePreferred = window.matchMedia(
+    '(prefers-color-scheme: dark)'
+  ).matches;
+
+  // Comprobamos si hay una preferencia guardada en el localStorage:
+  const storedThemePreference = localStorage.getItem('themePreference');
+
+  // Establecemos el modo inicial en el que se cargará la web, tomando de referencia
+  // primero si hay configuración guardada en el local storage y sino toma la preferencia del navegador/sistema Operativo:
+  const initialDarkMode =
+    storedThemePreference === 'true' ||
+    (!storedThemePreference && isDarkModePreferred);
+
+  const [isDarkMode, setIsDarkMode] = useState(initialDarkMode);
 
   useEffect(() => {
     const isDarkModePreferred = window.matchMedia(

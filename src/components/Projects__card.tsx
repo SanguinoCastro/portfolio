@@ -76,7 +76,7 @@ const Projects__card = ({
         <div className='project__visor__content content relative border-rad shadow py-[1rem] mx-auto  w-[50%] min-w-[73rem] h-[auto] z-[100]'>
           <button
             onClick={toggleVisor}
-            className='closeButton absolute right-[2rem] top-[2rem] w-[2rem] h-[2rem] rounded-full'
+            className='closeButton absolute right-[2rem] top-[1rem] w-[2rem] h-[2rem] shadow-none rounded-full text-[2rem]'
           >
             X
           </button>

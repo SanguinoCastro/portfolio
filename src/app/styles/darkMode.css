@@ -84,6 +84,10 @@ body.light .input {
   background-color: #ffff;
 }
 
+body.light .closeButton {
+  color: var(--black);
+}
+
 /* MediaQuerys */
 
 @media (max-width: 1211px) {
