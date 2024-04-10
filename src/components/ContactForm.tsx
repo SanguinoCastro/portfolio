@@ -5,11 +5,12 @@ import { useLanguage } from '@/app/context/LanguageContext';
 
 const ContactForm = () => {
   const { language } = useLanguage();
-  const [state] = useForm('mnqegdpk');
+  const [state, handleSubmit] = useForm('mnqegdpk');
   const [errorMail] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
   const [error, setError] = useState('');
   const [emailData, setEmailData] = useState({
+    email: '',
     message: '',
   });
   const handleChange = (
@@ -118,8 +119,9 @@ const ContactForm = () => {
         />
 
         <button
-          type={`${error == 'Por favor, indícame en qué te puedo ayudar' || error == "Si us plau, indica'm en què et puc ajudar." || error == 'Please, let me know how I can help you.' ? 'button' : 'submit'}`}
-          className={`input__button olive rounded-xl w-[35rem] h-[8rem] text-[2rem] mb-[-1rem] ${error == 'Por favor, indícame en qué te puedo ayudar' && 'disabled'}`}
+          type='submit'
+          className={`input__button olive rounded-xl w-[35rem] h-[8rem] text-[2rem] mb-[-1rem] ${state.submitting && 'disabled'}`}
+          disabled={state.submitting}
         >
           {language === 'es'
             ? 'Enviar mensaje'

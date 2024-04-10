@@ -85,9 +85,16 @@ export const useDarkMode = () => {
 interface DarkModeProviderProps {
   children: React.ReactNode;
 }
-const isDarkModePreferred = window.matchMedia(
-  '(prefers-color-scheme: dark)'
-).matches;
+
+var isDarkModePreferred = false;
+if (typeof window !== 'undefined') {
+  isDarkModePreferred = window.matchMedia(
+    '(prefers-color-scheme: dark)'
+  ).matches;
+}
+// const isDarkModePreferred = window.matchMedia(
+//   '(prefers-color-scheme: dark)'
+// ).matches;
 
 // Comprobamos si hay una preferencia guardada en el localStorage:
 const storedThemePreference = localStorage.getItem('themePreference');
