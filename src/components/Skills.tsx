@@ -59,7 +59,7 @@ const Skills = () => {
   const { isDarkMode } = useDarkMode();
   return (
     <div className='content__technologies w-full px-[2rem]  flex justify-around items-center'>
-      {isDarkMode
+      {!isDarkMode
         ? whiteSkills.map((skill, index) => (
             <Image
               src={skill}
