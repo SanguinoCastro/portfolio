@@ -19,8 +19,6 @@ const page = () => {
         body.classList.remove('light');
         localStorage.setItem('themePreference', 'false');
       }
-    } else {
-      return;
     }
   }, [isDarkMode]); // Asegúrate de ejecutar este efecto cada vez que isDarkMode cambie
 

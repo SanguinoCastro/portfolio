@@ -1,6 +1,6 @@
 'use client';
 
-import React, { createContext, useState, useContext } from 'react';
+import React, { createContext, useState, useContext, useEffect } from 'react';
 
 interface DarkModeContextType {
   isDarkMode: boolean;
@@ -34,17 +34,31 @@ if (typeof window !== 'undefined') {
 
 const storedThemePreference = localStorage.getItem('themePreference');
 
+// Establecemos el modo inicial en el que se cargará la web, tomando de referencia primero si hay configuración guardada en el local storage y sino toma la preferencia del navegador/ sistema Operativo:
 const initialDarkMode =
   storedThemePreference === 'true' ||
   (!storedThemePreference && isDarkModePreferred);
 export const DarkModeProvider: React.FC<DarkModeProviderProps> = ({
   children,
 }) => {
-  const [isDarkMode, setIsDarkMode] = useState(initialDarkMode);
+  const [isDarkMode, setIsDarkMode] = useState<boolean>(() => {
+    const storedThemePreference = localStorage.getItem('themePreference');
+    const isDarkModePreferred =
+      typeof window !== 'undefined' &&
+      window.matchMedia('(prefers-color-scheme: dark)').matches;
+    return (
+      storedThemePreference === 'true' ||
+      (!storedThemePreference && isDarkModePreferred)
+    );
+  });
 
   const toggleDarkMode = () => {
     setIsDarkMode((prevMode) => !prevMode);
   };
+
+  useEffect(() => {
+    localStorage.setItem('themePreference', isDarkMode.toString());
+  }, [isDarkMode]);
 
   const value: DarkModeContextType = {
     isDarkMode,
