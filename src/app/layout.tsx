@@ -22,7 +22,7 @@ import { LanguageProvider } from './context/LanguageContext';
 // const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Portfolio',
+  title: 'Portfolio ES',
   description:
     'Portfolio personal Eduard Sanguino front end developer de webs y aplicaciones',
 };
