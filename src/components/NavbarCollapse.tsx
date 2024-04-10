@@ -11,6 +11,26 @@ const NavbarCollapse = () => {
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+
+  const handleSmoothScroll = (
+    event: React.MouseEvent<HTMLAnchorElement, MouseEvent>
+  ) => {
+    event.preventDefault();
+    const targetId = event.currentTarget.getAttribute('href');
+
+    if (targetId) {
+      const targetElement = document.querySelector(targetId);
+
+      if (targetElement) {
+        if (typeof window === 'undefined') return;
+        const rect = targetElement.getBoundingClientRect();
+        window.scrollTo({
+          top: rect.top + window.scrollY,
+          behavior: 'smooth',
+        });
+      }
+    }
+  };
   return (
     <div className='nav__collapse mr-[-2.5rem] relative '>
       {/* Botón de la hamburguesa */}
@@ -24,14 +44,23 @@ const NavbarCollapse = () => {
       {/* Contenido del menú desplegable */}
       {isOpen && (
         <div className='burger-menu-content w-[15rem] z-10 top-[100%] right-0 text-[1.4rem] p-[1rem] flex flex-col gap-[1rem] content border-rad shadow absolute '>
-          <a href='#proyectos' className='border-rad w-full '>
+          <a
+            href='#projects'
+            className='border-rad w-full '
+            onClick={handleSmoothScroll}
+          >
             {language === 'es'
               ? 'Proyectos'
               : language === 'ca'
                 ? 'Projectes'
                 : 'Projects'}
           </a>
-          <a href='#contacto' className='border-rad w-full px-[0.5rem]'>
+
+          <a
+            href='#contact'
+            className='border-rad w-full px-[0.5rem]'
+            onClick={handleSmoothScroll}
+          >
             {language === 'es'
               ? 'Contacto'
               : language === 'ca'
