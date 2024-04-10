@@ -5,7 +5,7 @@
 
   .buttons__icons {
     display: flex;
-    width: 100%;
+    width: 99.9%;
     gap: 10%;
   }
 
