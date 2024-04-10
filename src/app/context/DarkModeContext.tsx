@@ -27,22 +27,20 @@ interface DarkModeProviderProps {
 export const DarkModeProvider: React.FC<DarkModeProviderProps> = ({
   children,
 }) => {
-  // Leer la preferencia de tema guardada o detectar la preferencia del sistema
-  const storedThemePreference =
-    typeof window !== 'undefined'
-      ? localStorage.getItem('themePreference')
-      : null;
-  const isDarkModePreferred = window.matchMedia(
-    '(prefers-color-scheme: dark)'
-  ).matches;
-
   // Establecer el estado inicial del tema
-  const [isDarkMode, setIsDarkMode] = useState(() => {
-    if (storedThemePreference !== null) {
-      return storedThemePreference === 'true';
-    }
-    return isDarkModePreferred;
-  });
+  const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
+
+  useEffect(() => {
+    // Leer la preferencia de tema guardada o detectar la preferencia del sistema
+    const storedThemePreference = localStorage.getItem('themePreference');
+    const isDarkModePreferred = window.matchMedia(
+      '(prefers-color-scheme: dark)'
+    ).matches;
+    setIsDarkMode(
+      storedThemePreference === 'true' ||
+        (!storedThemePreference && isDarkModePreferred)
+    );
+  }, []);
 
   // Guardar el estado del tema en localStorage
   useEffect(() => {
