@@ -28,7 +28,7 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header className='content__header content shadow w-full h-[5.2rem] flex px-[5rem] !justify-between items-center   border-rad overflow-auto'>
+    <header className='content__header content shadow w-full h-[5.5rem] flex px-[1.5rem] !justify-between items-center   border-rad overflow-auto'>
       <div className='flex items-center gap-10'>
         <Image
           src={es}

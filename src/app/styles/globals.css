@@ -349,6 +349,7 @@ section p {
 
   .nav__collapse {
     display: block;
+    margin-right: 0rem;
   }
 
   .grid__me {
