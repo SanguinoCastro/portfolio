@@ -37,18 +37,14 @@ export const DarkModeProvider: React.FC<DarkModeProviderProps> = ({
   children,
 }) => {
   const [isDarkMode, setIsDarkMode] = useState<boolean>(() => {
-    if (typeof window === 'undefined') {
-      return false;
-    } else {
-      const storedThemePreference = localStorage.getItem('themePreference');
-      const isDarkModePreferred =
-        typeof window !== 'undefined' &&
-        window.matchMedia('(prefers-color-scheme: dark)').matches;
-      return (
-        storedThemePreference === 'true' ||
-        (!storedThemePreference && isDarkModePreferred)
-      );
-    }
+    const storedThemePreference = localStorage.getItem('themePreference');
+    const isDarkModePreferred =
+      typeof window !== 'undefined' &&
+      window.matchMedia('(prefers-color-scheme: dark)').matches;
+    return (
+      storedThemePreference === 'true' ||
+      (!storedThemePreference && isDarkModePreferred)
+    );
   });
 
   const toggleDarkMode = () => {
