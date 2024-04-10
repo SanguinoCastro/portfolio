@@ -28,6 +28,7 @@ export const DarkModeProvider: React.FC<DarkModeProviderProps> = ({
   children,
 }) => {
   // Comprobamos cuál es la preferencia de modo del usuario:
+  if (typeof window === 'undefined') return;
   const isDarkModePreferred = window.matchMedia(
     '(prefers-color-scheme: dark)'
   ).matches;
@@ -44,6 +45,7 @@ export const DarkModeProvider: React.FC<DarkModeProviderProps> = ({
   const [isDarkMode, setIsDarkMode] = useState(initialDarkMode);
 
   useEffect(() => {
+    if (typeof window === 'undefined') return;
     const isDarkModePreferred = window.matchMedia(
       '(prefers-color-scheme: dark)'
     ).matches;
