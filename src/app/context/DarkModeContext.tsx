@@ -32,12 +32,7 @@ if (typeof window !== 'undefined') {
   ).matches;
 }
 
-const storedThemePreference = localStorage.getItem('themePreference');
-
 // Establecemos el modo inicial en el que se cargará la web, tomando de referencia primero si hay configuración guardada en el local storage y sino toma la preferencia del navegador/ sistema Operativo:
-const initialDarkMode =
-  storedThemePreference === 'true' ||
-  (!storedThemePreference && isDarkModePreferred);
 export const DarkModeProvider: React.FC<DarkModeProviderProps> = ({
   children,
 }) => {

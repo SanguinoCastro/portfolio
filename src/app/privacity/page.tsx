@@ -13,15 +13,15 @@ const page = () => {
     if (typeof window !== 'undefined') {
       const body = document.body;
 
-      // if (isDarkMode) {
-      //   body.classList.add('light');
-      //   localStorage.setItem('themePreference', 'true');
-      // } else {
-      //   body.classList.remove('light');
-      //   localStorage.setItem('themePreference', 'false');
-      // }
+      if (isDarkMode) {
+        body.classList.add('light');
+        localStorage.setItem('themePreference', 'true');
+      } else {
+        body.classList.remove('light');
+        localStorage.setItem('themePreference', 'false');
+      }
     }
-  }, []); // Asegúrate de ejecutar este efecto cada vez que isDarkMode cambie
+  }, [isDarkMode]); // Asegúrate de ejecutar este efecto cada vez que isDarkMode cambie
 
   return (
     <>
