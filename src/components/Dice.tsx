@@ -14,12 +14,7 @@ const Dice = () => {
           width={350}
           className='background1 border-rad'
         />
-        {/* <Image
-          src={image1}
-          alt='dice'
-          width={350}
-          className='background1 border-rad inner__shadow'
-        /> */}
+
         <Image
           src={image1nopc}
           alt='dice'

@@ -180,7 +180,7 @@ const Card = (props: any) => {
   });
 
   console.log(hours, weatherDescription);
-  // weatherDescription = 'drizzle';
+  weatherDescription = 'clear sky';
   return (
     <div className='weather__card h-[89%] w-[94.5%]  border-rad mt-[-4.5rem] pt-[3.2rem] '>
       <p
@@ -349,7 +349,7 @@ const Card = (props: any) => {
               src={showerRain}
               width={100}
               alt='weather-icon'
-              className={`showerRain mt-[1rem] mb-[-2rem] shadow_filter`}
+              className={`showerRain mt-[-1rem] mb-[-2rem] shadow_filter`}
             />
           ) : (
             ''

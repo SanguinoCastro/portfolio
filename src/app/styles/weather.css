@@ -32,10 +32,10 @@
     margin-top: -2rem;
   }
   .clear--sun {
-    margin-top: 8rem;
+    margin-top: 3rem;
   }
   .clear--moon {
-    margin-top: 9rem;
+    margin-top: 3rem;
   }
   .cloud--sun,
   .cloud--moon,
@@ -43,13 +43,13 @@
   .rain--moon,
   .thunder,
   .showerRain {
-    margin-top: 7rem;
+    margin-top: 3rem;
   }
   .brokenClouds,
   .cloud,
   .snow,
   .mist {
-    margin-top: 6rem;
+    margin-top: 0rem;
   }
   .nika {
     margin-top: 3rem;
@@ -135,5 +135,14 @@
     width: 48%;
     margin-left: 54.6%;
     margin-top: -15.3rem;
+  }
+}
+
+@media (max-width: 337px) {
+  .weather__list--li {
+    font-size: 1.4rem;
+  }
+  .weather__icon--image {
+    margin-top: 6rem;
   }
 }
