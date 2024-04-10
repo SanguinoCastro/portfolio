@@ -33,8 +33,8 @@ const Header: React.FC = () => {
         <Image
           src={es}
           alt='es'
-          width={55}
-          height={55}
+          width={50}
+          height={50}
           className='scale-[115%]'
         />
         {language === 'es' ? (
