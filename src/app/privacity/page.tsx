@@ -5,19 +5,19 @@ import Privacity__text from '@/components/Privacity__text';
 import Header__privacity from '@/components/Header__privacity';
 
 const page = () => {
-  let { isDarkMode, toggleDarkMode } = useDarkMode();
+  let { isDarkMode } = useDarkMode();
 
   useEffect(() => {
     const body = document.body;
 
-    if (!isDarkMode) {
+    if (isDarkMode) {
       body.classList.add('light');
-      localStorage.setItem('themePreference', 'false');
+      localStorage.setItem('themePreference', 'true');
     } else {
       body.classList.remove('light');
-      localStorage.setItem('themePreference', 'true');
+      localStorage.setItem('themePreference', 'false');
     }
-  }, [isDarkMode]);
+  }, []);
   return (
     <>
       <Header__privacity />
