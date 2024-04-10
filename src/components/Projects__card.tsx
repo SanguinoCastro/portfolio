@@ -70,10 +70,10 @@ const Projects__card = ({
         </div>
       </article>
       <div
-        className={`project__visor ${opened ? 'zoom-in' : 'zoom-out'} fixed  w-[100%] h-[105%] top-0 left-0 bg-[var(--bg-transparent)] backdrop-blur-sm flex justify-center items-center`}
+        className={`project__visor ${opened ? 'zoom-in' : 'zoom-out'} fixed  w-[100%] h-[105%] top-0 left-0 bg-[var(--bg-transparent)] backdrop-blur-sm flex justify-center items-center z-[100]`}
         onClick={handleBackgroundClick}
       >
-        <div className='project__visor__content content relative border-rad shadow py-[1rem] mx-auto  w-[50%] min-w-[73rem] h-[auto] z-40'>
+        <div className='project__visor__content content relative border-rad shadow py-[1rem] mx-auto  w-[50%] min-w-[73rem] h-[auto] z-[100]'>
           <button
             onClick={toggleVisor}
             className='closeButton absolute right-[2rem] top-[2rem] w-[2rem] h-[2rem] rounded-full'

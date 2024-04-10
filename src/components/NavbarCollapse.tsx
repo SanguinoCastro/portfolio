@@ -50,10 +50,10 @@ const NavbarCollapse = () => {
             onClick={handleSmoothScroll}
           >
             {language === 'es'
-              ? 'Proyectos'
+              ? 'Trabajos'
               : language === 'ca'
-                ? 'Projectes'
-                : 'Projects'}
+                ? 'Treballs'
+                : 'Jobs'}
           </a>
 
           <a

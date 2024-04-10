@@ -66,7 +66,7 @@ const Header: React.FC = () => {
                 ? 'Trabajos'
                 : language === 'ca'
                   ? 'Treballs'
-                  : 'Works'}
+                  : 'Jobs'}
             </a>
           </li>
           <li>
