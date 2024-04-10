@@ -79,7 +79,11 @@ const Search = () => {
       ) : (
         <div className='h-[89.5%] w-[94.5%] mt-[-4rem] weather__card border-rad'>
           <p className='mt-[7rem]'>
-            Ha habido un error al consultar el tiempo de tu ciudad
+            {language === 'es'
+              ? 'Ha habido un error al consultar el tiempo de tu ciudad'
+              : language === 'ca'
+                ? 'Hi ha hagut un error al consultar el temps de la teva ciutat'
+                : 'There was an error while fetching the weather for your city.'}
           </p>
         </div>
       )}
