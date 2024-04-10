@@ -24,7 +24,7 @@ import { LanguageProvider } from './context/LanguageContext';
 export const metadata: Metadata = {
   title: 'Portfolio ES',
   description:
-    'Portfolio personal Eduard Sanguino front end developer de webs y aplicaciones',
+    'Portfolio personal de Eduard Sanguino front end developer de webs y aplicaciones eduardsanguinodev',
 };
 
 export default function RootLayout({
