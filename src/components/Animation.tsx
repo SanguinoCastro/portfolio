@@ -18,6 +18,9 @@ const Animation = () => {
       if ('touches' in e && e.touches && e.touches[0]) {
         offsetX = e.touches[0].clientX - rect.left;
         offsetY = e.touches[0].clientY - rect.top;
+
+        // Deshabilitar el desplazamiento de la página mientras se manipula la imagen
+        document.body.style.overflow = 'hidden';
       } else if (e instanceof MouseEvent) {
         offsetX = e.clientX - rect.left;
         offsetY = e.clientY - rect.top;
@@ -28,17 +31,14 @@ const Animation = () => {
       const transformString = `perspective(500px) scale(1.1) rotateX(${xRotation}deg) rotateY(${yRotation}deg)`;
 
       el.style.transform = transformString;
-
-      // Deshabilitar el scroll al manipular la imagen
-      document.body.classList.add('no-scroll');
     };
 
     const handleReset = () => {
       if (!el) return;
       el.style.transform = 'perspective(500px) scale(1) rotateX(0) rotateY(0)';
 
-      // Habilitar el scroll cuando se termina de manipular la imagen
-      document.body.classList.remove('no-scroll');
+      // Habilitar el desplazamiento de la página cuando se termina de manipular la imagen
+      document.body.style.overflow = 'auto';
     };
 
     if (el) {
