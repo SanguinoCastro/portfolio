@@ -1,4 +1,5 @@
 'use client';
+
 import { useEffect } from 'react';
 import { useDarkMode } from '../context/DarkModeContext';
 import Privacity__text from '@/components/Privacity__text';
@@ -12,15 +13,15 @@ const page = () => {
     if (typeof window !== 'undefined') {
       const body = document.body;
 
-      if (isDarkMode) {
-        body.classList.add('light');
-        localStorage.setItem('themePreference', 'true');
-      } else {
-        body.classList.remove('light');
-        localStorage.setItem('themePreference', 'false');
-      }
+      // if (isDarkMode) {
+      //   body.classList.add('light');
+      //   localStorage.setItem('themePreference', 'true');
+      // } else {
+      //   body.classList.remove('light');
+      //   localStorage.setItem('themePreference', 'false');
+      // }
     }
-  }, [isDarkMode]); // Asegúrate de ejecutar este efecto cada vez que isDarkMode cambie
+  }, []); // Asegúrate de ejecutar este efecto cada vez que isDarkMode cambie
 
   return (
     <>
