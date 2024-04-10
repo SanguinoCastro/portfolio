@@ -4,7 +4,6 @@ import React, { useEffect } from 'react';
 
 const Animation = () => {
   useEffect(() => {
-    if (typeof window === 'undefined') return;
     const el = document.getElementById('animation');
 
     const handleMove = (e: MouseEvent | TouchEvent) => {
@@ -16,11 +15,9 @@ const Animation = () => {
         offsetY = 0;
 
       if ('touches' in e && e.touches && e.touches[0]) {
+        e.preventDefault(); // Evita el desplazamiento predeterminado en dispositivos táctiles
         offsetX = e.touches[0].clientX - rect.left;
         offsetY = e.touches[0].clientY - rect.top;
-
-        // Deshabilitar el desplazamiento de la página mientras se manipula la imagen
-        document.body.style.overflow = 'hidden';
       } else if (e instanceof MouseEvent) {
         offsetX = e.clientX - rect.left;
         offsetY = e.clientY - rect.top;
@@ -36,16 +33,13 @@ const Animation = () => {
     const handleReset = () => {
       if (!el) return;
       el.style.transform = 'perspective(500px) scale(1) rotateX(0) rotateY(0)';
-
-      // Habilitar el desplazamiento de la página cuando se termina de manipular la imagen
-      document.body.style.overflow = 'auto';
     };
 
     if (el) {
       el.addEventListener('mousemove', handleMove);
       el.addEventListener('mouseleave', handleReset);
 
-      const options = { passive: true } as EventListenerOptions;
+      const options = { passive: false } as EventListenerOptions;
       el.addEventListener('touchmove', handleMove, options);
       el.addEventListener('touchend', handleReset);
 
