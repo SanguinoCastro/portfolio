@@ -184,7 +184,7 @@ const Card = (props: any) => {
   return (
     <div className='weather__card h-[89%] w-[94.5%]  border-rad mt-[-4.5rem] pt-[3.2rem] '>
       <p
-        className={`weather__title  flex justify-center mt-[-1rem] mr-[17rem] text-[1.8rem]  ${!isDarkMode ? 'text-[var(--white)]' : 'text-[var(--black)]'}`}
+        className={`weather__title  flex justify-center mt-[-1rem] mr-[17rem] text-[1.8rem]  ${isDarkMode ? 'text-[var(--white)]' : 'text-[var(--black)]'}`}
       >
         {language === 'es'
           ? 'EL TIEMPO'
@@ -195,7 +195,7 @@ const Card = (props: any) => {
       <ul className='weather__list pt-[1rem]'>
         {weatherArray.map((element, index) => (
           <li
-            className={`weather__list--li flex justify-center w-1/2 mt-[0rem] text-[1.8rem] font-normal text-center ${!isDarkMode ? 'text-[var(--white)]' : 'text-[var(--black)]'}`}
+            className={`weather__list--li flex justify-center w-1/2 mt-[0rem] text-[1.8rem] font-normal text-center ${isDarkMode ? 'text-[var(--white)]' : 'text-[var(--black)]'}`}
             key={index}
           >
             {element}

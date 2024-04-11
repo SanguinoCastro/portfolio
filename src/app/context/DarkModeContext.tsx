@@ -25,45 +25,34 @@ interface DarkModeProviderProps {
   children: React.ReactNode;
 }
 
-var isDarkModePreferred = false;
-if (typeof window !== 'undefined') {
-  isDarkModePreferred = window.matchMedia(
-    '(prefers-color-scheme: dark)'
-  ).matches;
-}
-
-// Establecemos el modo inicial en el que se cargará la web, tomando de referencia primero si hay configuración guardada en el local storage y sino toma la preferencia del navegador/ sistema Operativo:
-
-console.log('tipo de window:' + typeof window);
-
 export const DarkModeProvider: React.FC<DarkModeProviderProps> = ({
   children,
 }) => {
   const [isDarkMode, setIsDarkMode] = useState<boolean>(() => {
-    if (localStorage !== null) {
-      const storedPreference = localStorage.getItem('themePreference');
+    if (typeof window !== 'undefined') {
+      const storedPreference = window.localStorage.getItem('themePreference');
       if (storedPreference !== null) {
         return storedPreference === 'true';
-      } else {
-        return window.matchMedia('(prefers-color-scheme: dark)').matches;
       }
-    } else {
-      return false;
+      return window.matchMedia('(prefers-color-scheme: dark)').matches;
     }
+    return false;
   });
 
   useEffect(() => {
+    const body = document.body;
+    if (isDarkMode) {
+      body.classList.remove('light');
+    } else {
+      body.classList.add('light');
+    }
     if (typeof window !== 'undefined') {
       localStorage.setItem('themePreference', isDarkMode.toString());
     }
   }, [isDarkMode]);
 
   const toggleDarkMode = (newPreference: boolean) => {
-    setIsDarkMode((prevIsDarkMode) => {
-      const updatedPreference =
-        newPreference !== undefined ? newPreference : !prevIsDarkMode;
-      return updatedPreference;
-    });
+    setIsDarkMode(newPreference);
   };
 
   const value: DarkModeContextType = {

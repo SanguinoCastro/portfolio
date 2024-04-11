@@ -1,102 +1,44 @@
 'use client';
 
 import Image from 'next/image';
-// import { useEffect, useState } from 'react';
-// import { useDarkMode } from '../app/context/DarkModeContext';
-// import moon from '../assets/icons/moon.png';
-// import sun from '../assets/icons/sun.png';
-
-// const Dark_Mode = () => {
-//   // Comprobamos cuál es la preferencia de modo del usuario:
-//   // const isDarkModePreferred = window.matchMedia(
-//   //   '(prefers-color-scheme: dark)'
-//   // ).matches;
-
-//   // // Comprobamos si hay una preferencia guardada en el localStorage:
-//   // const storedThemePreference = localStorage.getItem('themePreference');
-
-//   // // Establecemos el modo inicial en el que se cargará la web, tomando de referencia primero si hay configuración guardada en el local storage y sino toma la preferencia del navegador/ sistema Operativo:
-//   // const initialDarkMode =
-//   //   storedThemePreference === 'true' ||
-//   //   (!storedThemePreference && isDarkModePreferred);
-
-//   // Creación del useState que controlara el modo css y sus estilos
-//   let { isDarkMode, toggleDarkMode } = useDarkMode();
-
-//   useEffect(() => {
-//     const body = document.body;
-
-//     if (!isDarkMode) {
-//       body.classList.add('light');
-//       localStorage.setItem('themePreference', 'false');
-//     } else {
-//       body.classList.remove('light');
-//       localStorage.setItem('themePreference', 'true');
-//     }
-//   }, [isDarkMode]);
-
-//   const handleToggle = () => {
-//     if (isDarkMode !== !isDarkMode) {
-//       toggleDarkMode();
-//     }
-//   };
-
-//   return (
-//     <article className='grid'>
-//       <input
-//         id='toggle-button'
-//         type='checkbox'
-//         className='darkMode__input'
-//         checked={!isDarkMode}
-//         onChange={handleToggle}
-//       />
-//       <label
-//         htmlFor='toggle-button'
-//         className={`darkMode__label flex items-center`}
-//       >
-//         <div className='sun-moon'>
-//           {isDarkMode ? (
-//             <Image src={moon} width={400} alt='Modo oscuro' className='moon' />
-//           ) : (
-//             <Image
-//               src={sun}
-//               width={500}
-//               alt='Modo claro'
-//               className='w-[20rem] sun'
-//             />
-//           )}
-//         </div>
-//       </label>
-//     </article>
-//   );
-// };
-// export default Dark_Mode;
-
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useDarkMode } from '../app/context/DarkModeContext';
 import moon from '../assets/icons/moon.png';
 import sun from '../assets/icons/sun.png';
 
 const Dark_Mode = () => {
-  const { isDarkMode, toggleDarkMode } = useDarkMode();
-  const [initialized, setInitialized] = useState(false);
+  // Comprobamos cuál es la preferencia de modo del usuario:
+  const isDarkModePreferred = window.matchMedia(
+    '(prefers-color-scheme: dark)'
+  ).matches;
+
+  // // Comprobamos si hay una preferencia guardada en el localStorage:
+  const storedThemePreference = localStorage.getItem('themePreference');
+
+  // // Establecemos el modo inicial en el que se cargará la web, tomando de referencia primero si hay configuración guardada en el local storage y sino toma la preferencia del navegador/ sistema Operativo:
+  const initialDarkMode =
+    storedThemePreference === 'true' ||
+    (!storedThemePreference && isDarkModePreferred);
+
+  // Creación del useState que controlara el modo css y sus estilos
+  let { isDarkMode, toggleDarkMode } = useDarkMode();
 
   useEffect(() => {
     const body = document.body;
 
-    if (initialized) {
-      if (!isDarkMode) {
-        body.classList.remove('light');
-      } else {
-        body.classList.add('light');
-      }
+    if (!isDarkMode) {
+      body.classList.add('light');
+      localStorage.setItem('themePreference', 'false');
     } else {
-      setInitialized(true);
+      body.classList.remove('light');
+      localStorage.setItem('themePreference', 'true');
     }
-  }, [initialized, isDarkMode]);
+  }, [isDarkMode]);
 
   const handleToggle = () => {
-    toggleDarkMode(!isDarkMode);
+    if (isDarkMode !== !isDarkMode) {
+      toggleDarkMode(!isDarkMode);
+    }
   };
 
   return (
@@ -105,7 +47,7 @@ const Dark_Mode = () => {
         id='toggle-button'
         type='checkbox'
         className='darkMode__input'
-        checked={isDarkMode}
+        checked={!isDarkMode}
         onChange={handleToggle}
       />
       <label
@@ -113,7 +55,7 @@ const Dark_Mode = () => {
         className={`darkMode__label flex items-center`}
       >
         <div className='sun-moon'>
-          {!isDarkMode ? (
+          {isDarkMode ? (
             <Image src={moon} width={400} alt='Modo oscuro' className='moon' />
           ) : (
             <Image
@@ -128,5 +70,58 @@ const Dark_Mode = () => {
     </article>
   );
 };
-
 export default Dark_Mode;
+
+// import React, { useEffect, useState } from 'react';
+// import { useDarkMode } from '../app/context/DarkModeContext';
+// import moon from '../assets/icons/moon.png';
+// import sun from '../assets/icons/sun.png';
+
+// const Dark_Mode = () => {
+//   const { isDarkMode, toggleDarkMode } = useDarkMode();
+
+//   useEffect(() => {
+//     // Verificar y actualizar el estado local al cargar el componente
+//     const storedPreference = localStorage.getItem('themePreference');
+//     if (storedPreference !== null) {
+//       toggleDarkMode(storedPreference === 'true');
+//     }
+//   }, [toggleDarkMode]);
+
+//   const handleToggle = () => {
+//     const newPreference = !isDarkMode;
+//     toggleDarkMode(newPreference);
+//     // Guardar el estado en el almacenamiento local
+//     localStorage.setItem('themePreference', newPreference.toString());
+//   };
+//   return (
+//     <article className='grid'>
+//       <input
+//         id='toggle-button'
+//         type='checkbox'
+//         className='darkMode__input'
+//         checked={isDarkMode}
+//         onChange={handleToggle}
+//       />
+//       <label
+//         htmlFor='toggle-button'
+//         className={`darkMode__label flex items-center`}
+//       >
+//         <div className='sun-moon'>
+//           {!isDarkMode ? (
+//             <Image src={moon} width={400} alt='Modo oscuro' className='moon' />
+//           ) : (
+//             <Image
+//               src={sun}
+//               width={500}
+//               alt='Modo claro'
+//               className='w-[20rem] sun'
+//             />
+//           )}
+//         </div>
+//       </label>
+//     </article>
+//   );
+// };
+
+// export default Dark_Mode;
