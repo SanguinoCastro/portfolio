@@ -53,7 +53,7 @@ const Projects__card = ({
                 key={index}
                 src={icon}
                 alt={icon}
-                height={500}
+                height={450}
                 className='tech__icon'
               />
             ))}
