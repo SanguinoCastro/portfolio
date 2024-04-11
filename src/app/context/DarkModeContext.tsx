@@ -40,15 +40,11 @@ export const DarkModeProvider: React.FC<DarkModeProviderProps> = ({
   children,
 }) => {
   const [isDarkMode, setIsDarkMode] = useState<boolean>(() => {
-    if (typeof window !== 'undefined') {
-      const storedPreference = localStorage.getItem('themePreference');
-      return (
-        storedPreference === 'true' ||
-        (!storedPreference && isDarkModePreferred)
-      );
+    const storedPreference = localStorage?.getItem('themePreference');
+    if (storedPreference !== null) {
+      return storedPreference === 'true';
     } else {
-      // En el servidor, devolver un valor predeterminado
-      return false;
+      return window.matchMedia('(prefers-color-scheme: dark)').matches;
     }
   });
 

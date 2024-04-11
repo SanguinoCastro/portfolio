@@ -72,27 +72,28 @@ import Image from 'next/image';
 // };
 // export default Dark_Mode;
 
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDarkMode } from '../app/context/DarkModeContext';
 import moon from '../assets/icons/moon.png';
 import sun from '../assets/icons/sun.png';
 
 const Dark_Mode = () => {
   const { isDarkMode, toggleDarkMode } = useDarkMode();
+  const [initialized, setInitialized] = useState(false);
 
   useEffect(() => {
     const body = document.body;
 
-    const storedPreference = localStorage.getItem('themePreference');
-    const isDarkMode = storedPreference === 'true';
-    toggleDarkMode(!isDarkMode);
-
-    if (!isDarkMode) {
-      body.classList.add('light');
+    if (initialized) {
+      if (!isDarkMode) {
+        body.classList.remove('light');
+      } else {
+        body.classList.add('light');
+      }
     } else {
-      body.classList.remove('light');
+      setInitialized(true);
     }
-  }, [toggleDarkMode]);
+  }, [initialized, isDarkMode]);
 
   const handleToggle = () => {
     toggleDarkMode(!isDarkMode);
