@@ -93,7 +93,7 @@ const Dark_Mode = () => {
   }, [isDarkMode]);
 
   const handleToggle = () => {
-    toggleDarkMode();
+    toggleDarkMode(!isDarkMode);
   };
 
   return (
