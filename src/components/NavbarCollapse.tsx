@@ -35,7 +35,7 @@ const NavbarCollapse = () => {
     <div className='nav__collapse mr-[-2.5rem] relative '>
       {/* Botón de la hamburguesa */}
       <button
-        className={`w-[4.5rem] h-[4.5rem] text-[3rem] cursor-pointer bg-none shadow-none border-none rounded-full ${!isDarkMode ? 'text-[var(--white)]' : 'text-[var(--black)]'}`}
+        className={`w-[4.5rem] h-[4.5rem] text-[3rem] cursor-pointer bg-none shadow-none border-none rounded-full ${isDarkMode ? 'text-[var(--white)]' : 'text-[var(--black)]'}`}
         onClick={toggleMenu}
       >
         ☰
