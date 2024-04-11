@@ -40,7 +40,7 @@ export const DarkModeProvider: React.FC<DarkModeProviderProps> = ({
   children,
 }) => {
   const [isDarkMode, setIsDarkMode] = useState<boolean>(() => {
-    if (localStorage !== 'undefined') {
+    if (localStorage !== null) {
       const storedPreference = localStorage.getItem('themePreference');
       if (storedPreference !== null) {
         return storedPreference === 'true';
