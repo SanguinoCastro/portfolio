@@ -43,8 +43,6 @@ const Card = (props: any) => {
   const cityDate = new Date(dT * 1000 + time * 1000).getDate();
   const cityMinutes = minutes < 10 ? `0` + minutes : minutes;
   const cityHours = hours < 10 ? `0` + hours : hours;
-  const timeFormat = cityHours >= '12' ? 'PM' : 'AM';
-  const mainTime = `${cityHours} :${cityMinutes} `; //${timeFormat}
 
   const isDay = hours >= 7 && hours < 19 ? true : false;
 
@@ -180,7 +178,7 @@ const Card = (props: any) => {
   });
 
   console.log(hours, weatherDescription);
-  weatherDescription = 'clear sky';
+  // weatherDescription = 'snow';
   return (
     <div className='weather__card h-[89%] w-[94.5%]  border-rad mt-[-4.5rem] pt-[3.2rem] '>
       <p

@@ -6,7 +6,7 @@ import Privacity__text from '@/components/Privacity__text';
 import Header__privacity from '@/components/Header__privacity';
 
 const page = () => {
-  let { isDarkMode } = useDarkMode();
+  const { isDarkMode } = useDarkMode();
 
   useEffect(() => {
     // Verificar si estamos en el entorno del cliente
@@ -15,10 +15,8 @@ const page = () => {
 
       if (isDarkMode) {
         body.classList.add('light');
-        localStorage.setItem('themePreference', 'true');
       } else {
         body.classList.remove('light');
-        localStorage.setItem('themePreference', 'false');
       }
     }
   }, [isDarkMode]); // Asegúrate de ejecutar este efecto cada vez que isDarkMode cambie

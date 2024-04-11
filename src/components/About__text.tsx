@@ -15,8 +15,8 @@ const About__text = () => {
       {language === 'es' ? (
         <>
           <p>
-            ¡Hola! Soy un Geek entusiasta, especializado en desarrollo Frontend
-            con tecnologías como React y Next.
+            ¡Hola! Soy un Geek entusiasta, especializado en el desarrollo
+            Frontend de webs y aplicaciones.
           </p>
           <br />
           <p>
@@ -28,9 +28,8 @@ const About__text = () => {
       ) : language === 'ca' ? (
         <>
           <p>
-            Hola! Sóc un entusiasta de la tecnologia, he decidit arriscar-me a
-            un canvi de professió per dedicar-me al que realment m'apassiona, la
-            programació.
+            ¡Hola! Sóc un entusiasta de la tecnologia, especialitzat en el
+            desenvolupament Frontend de webs i aplicacions.
           </p>
           <br />
           <p>
@@ -42,9 +41,8 @@ const About__text = () => {
       ) : (
         <>
           <p>
-            Hello! I'm an enthusiastic geek who decided to take the leap into a
-            career change to pursue what I'm truly passionate about,
-            programming.
+            Hi! I'm an enthusiastic Geek, specialized in Frontend development of
+            websites and applications.
           </p>
           <br />
           <p>

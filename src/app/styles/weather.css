@@ -29,7 +29,7 @@
 
 @media (max-width: 1211px) {
   .weather__icon--image {
-    margin-top: -2rem;
+    margin-top: 2.5rem;
   }
   .clear--sun {
     margin-top: 3rem;
