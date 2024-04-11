@@ -40,14 +40,22 @@ export const DarkModeProvider: React.FC<DarkModeProviderProps> = ({
   children,
 }) => {
   const [isDarkMode, setIsDarkMode] = useState<boolean>(() => {
-    const storedPreference = localStorage.getItem('themePreference');
-    return (
-      storedPreference === 'true' || (!storedPreference && isDarkModePreferred)
-    );
+    if (typeof window !== 'undefined') {
+      const storedPreference = localStorage.getItem('themePreference');
+      return (
+        storedPreference === 'true' ||
+        (!storedPreference && isDarkModePreferred)
+      );
+    } else {
+      // En el servidor, devolver un valor predeterminado
+      return false;
+    }
   });
 
   useEffect(() => {
-    localStorage.setItem('themePreference', isDarkMode.toString());
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('themePreference', isDarkMode.toString());
+    }
   }, [isDarkMode]);
 
   const toggleDarkMode = (newPreference: boolean) => {

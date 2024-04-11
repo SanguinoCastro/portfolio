@@ -83,14 +83,16 @@ const Dark_Mode = () => {
   useEffect(() => {
     const body = document.body;
 
-    if (isDarkMode) {
+    const storedPreference = localStorage.getItem('themePreference');
+    const isDarkMode = storedPreference === 'true';
+    toggleDarkMode(!isDarkMode);
+
+    if (!isDarkMode) {
       body.classList.add('light');
-      localStorage.setItem('themePreference', 'true');
     } else {
       body.classList.remove('light');
-      localStorage.setItem('themePreference', 'false');
     }
-  }, [isDarkMode]);
+  }, [toggleDarkMode]);
 
   const handleToggle = () => {
     toggleDarkMode(!isDarkMode);
