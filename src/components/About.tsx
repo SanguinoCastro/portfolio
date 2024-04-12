@@ -23,7 +23,7 @@ const About = () => {
         </section>
         <About__text />
       </div>
-      <div className=' about__containerBottom flex justify-center items-center mt-[1rem] ml-[16.5rem]'>
+      <div className=' about__containerBottom flex justify-center items-center mt-[0rem] ml-[16.5rem]'>
         <section className='flex justify-center items-center gap-[2rem]'>
           <About__button />
           <Link

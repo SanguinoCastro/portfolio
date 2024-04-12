@@ -29,7 +29,7 @@
 
 @media (max-width: 1211px) {
   .weather__icon--image {
-    margin-top: 2.5rem;
+    margin-top: 3rem;
   }
   .clear--sun {
     margin-top: 3rem;
@@ -55,12 +55,6 @@
     margin-top: 3rem;
     margin-bottom: -1rem;
     scale: 95%;
-  }
-}
-
-@media (max-width: 840px) {
-  .weather__icon--image {
-    margin-top: -1rem;
   }
 }
 

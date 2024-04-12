@@ -15,11 +15,11 @@ const About__button = () => {
       className='olive w-[25.3rem] h-[5rem] border-rad text-[1.8rem] transition-all duration-300'
     >
       {language === 'es' ? (
-        <>¡Contáctame!</>
+        <>Contáctame</>
       ) : language === 'ca' ? (
-        <>Contacta'm!</>
+        <>Contacta'm</>
       ) : (
-        <>Contact me!</>
+        <>Contact me</>
       )}
     </button>
   );
