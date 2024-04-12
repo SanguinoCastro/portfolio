@@ -41,7 +41,7 @@ const ContactForm = () => {
   };
 
   return (
-    <div className='contact__content w-[100%] h-full flex  items-center justify-center p-[2.5rem]'>
+    <div className='contact__content w-full h-full flex  items-center justify-center p-[2.5rem]'>
       <div className='contact__title w-1/2 h-full flex flex-col text-left gap-[3rem]'>
         {language === 'es' ? (
           <>
