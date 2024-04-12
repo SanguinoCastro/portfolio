@@ -118,7 +118,7 @@
   }
 }
 
-@media (max-width: 505px) {
+@media (max-width: 506px) {
   .weather__input--camp {
     margin-right: -1.5rem;
     margin-left: 2rem;
