@@ -18,7 +18,7 @@ const Projects__details = ({
     <div className='visor__content flex w-full px-[2rem] gap-12 items-center justify-around'>
       <iframe
         id={imageAlt}
-        title={title}
+        title='web visor'
         width='450'
         height='600'
         src={link}

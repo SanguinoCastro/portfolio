@@ -69,6 +69,7 @@ const Search = () => {
           <button
             onClick={handleClick}
             className='weather__input--btn bg-[var(--olive)] w-[2.5rem] h-[2.3rem] mt-[0.1rem]'
+            aria-label='Search'
           >
             <SearchIcon />
           </button>
