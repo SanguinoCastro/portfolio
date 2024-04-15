@@ -2,11 +2,13 @@
 import { useLanguage } from '@/app/context/LanguageContext';
 import NavbarCollapse from './NavbarCollapse';
 import es from '../assets/icons/es.svg';
+import esWhite from '../assets/icons/es-white.svg';
 import Image from 'next/image';
+import { useDarkMode } from '@/app/context/DarkModeContext';
 
 const Header: React.FC = () => {
   const { language } = useLanguage();
-
+  const { isDarkMode } = useDarkMode();
   const handleSmoothScroll = (
     event: React.MouseEvent<HTMLAnchorElement, MouseEvent>
   ) => {
@@ -30,13 +32,23 @@ const Header: React.FC = () => {
   return (
     <header className='content__header content shadow w-full h-[5.2rem] flex px-[1.5rem] !justify-between items-center   border-rad overflow-auto'>
       <div className='flex items-center gap-10'>
-        <Image
-          src={es}
-          alt='es'
-          width={55}
-          height={55}
-          className='scale-[115%]'
-        />
+        {!isDarkMode ? (
+          <Image
+            src={es}
+            alt='es'
+            width={55}
+            height={55}
+            className='scale-[115%]'
+          />
+        ) : (
+          <Image
+            src={esWhite}
+            alt='es'
+            width={55}
+            height={55}
+            className='scale-[115%]'
+          />
+        )}
         {language === 'es' ? (
           <p>
             <span className='capital font-bold'>E</span>ncuentra{' '}

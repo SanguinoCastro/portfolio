@@ -1,31 +1,39 @@
 'use client';
-import nextWhite from '../assets/icons/Next_white.png';
-import nextGreen from '../assets/icons/Next_green.png';
+import nextWhite from '../assets/icons/Next-white.svg';
+import nextGreen from '../assets/icons/Next-green.svg';
 import typescriptWhite from '../assets/icons/Typescript--white.svg';
 import typescriptGreen from '../assets/icons/Typescript--green.svg';
 import tailwindWhite from '../assets/icons/Tailwind--white.svg';
 import tailwindGreen from '../assets/icons/Tailwind--green.svg';
-import javascriptWhite from '../assets/icons/JavaScript_white.png';
-import javascriptGreen from '../assets/icons/JavaScript_green.png';
+import javascriptWhite from '../assets/icons/JavaScript-white.svg';
+import javascriptGreen from '../assets/icons/JavaScript-green.svg';
 import html5White from '../assets/icons/HTML5--white.svg';
 import html5Green from '../assets/icons/HTML5--green.svg';
 import css3White from '../assets/icons/CSS3--white.svg';
 import css3Green from '../assets/icons/CSS3--green.svg';
 import bootstrapWhite from '../assets/icons/Bootstrap-white.svg';
 import bootstrapGreen from '../assets/icons/Bootstrap-green.svg';
-import nodeWhite from '../assets/icons/Node_white.png';
-import nodeGreen from '../assets/icons/Node_green.png';
-import gitWhite from '../assets/icons/github--white.svg';
-import gitGreen from '../assets/icons/github--green.svg';
-import jiraWhite from '../assets/icons/Jira_white.png';
-import jiraGreen from '../assets/icons/Jira_green.png';
-import reactWhite from '../assets/icons/React_white.png';
-import reactGreen from '../assets/icons/React_green.png';
-import sassWhite from '../assets/icons/Sass_white.png';
-import sassGreen from '../assets/icons/Sass_green.png';
+import nodeWhite from '../assets/icons/Node-white.svg';
+import nodeGreen from '../assets/icons/Node-green.svg';
+import githubWhite from '../assets/icons/github--white.svg';
+import githubGreen from '../assets/icons/github--green.svg';
+import gitWhite from '../assets/icons/Git-white.svg';
+import gitGreen from '../assets/icons/Git-green.svg';
+import jiraWhite from '../assets/icons/Jira-white.svg';
+import jiraGreen from '../assets/icons/Jira-green.svg';
+import reactWhite from '../assets/icons/React-white.svg';
+import reactGreen from '../assets/icons/React-green.svg';
+import sassWhite from '../assets/icons/Sass-white.svg';
+import sassGreen from '../assets/icons/Sass-green.svg';
 import Image from 'next/image';
 import { useDarkMode } from '@/app/context/DarkModeContext';
 
+// fbfbfbff white
+// e2e2e2ff darkWhite
+// 688B93 blue
+// #222D11 green
+// 010200ff darkgreen
+// #F6D069 yellow
 const whiteSkills = [
   nextWhite,
   reactWhite,
@@ -37,6 +45,7 @@ const whiteSkills = [
   bootstrapWhite,
   nodeWhite,
   gitWhite,
+  githubWhite,
   jiraWhite,
   sassWhite,
 ];
@@ -52,6 +61,7 @@ const greenSkills = [
   bootstrapGreen,
   nodeGreen,
   gitGreen,
+  githubGreen,
   jiraGreen,
   sassGreen,
 ];

@@ -1,13 +1,13 @@
 'use client';
 import { useLanguage } from '@/app/context/LanguageContext';
 import cintelec from '../assets/images/Cintelec.png';
-import next from '../assets/icons/Next_white.png';
+import next from '../assets/icons/Next-white.svg';
 import typescript from '../assets/icons/Typescript--white.svg';
 import tailwind from '../assets/icons/Tailwind--white.svg';
-import javascript from '../assets/icons/JavaScript_white.png';
+import javascript from '../assets/icons/JavaScript-white.svg';
 import html5 from '../assets/icons/HTML5--white.svg';
 import css3 from '../assets/icons/CSS3--white.svg';
-import node from '../assets/icons/Node_white.png';
+import node from '../assets/icons/Node-white.svg';
 import Projects__card from './Projects__card';
 import { useState } from 'react';
 import Cintelec from './projects_info/Cintelec';

@@ -103,11 +103,7 @@ const ContactForm = () => {
           <input type='checkbox' name='privacity' id='privacity' required />
           <label htmlFor='privacity' className='privacity__label text-[1.4rem]'>
             *Acepto la{' '}
-            <a
-              href='/privacity'
-              target='_blank'
-              className='text-[var(--olive)] underline'
-            >
+            <a href='/privacity' className='text-[var(--olive)] underline'>
               política de privacidad
             </a>
           </label>
