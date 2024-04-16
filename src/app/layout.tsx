@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { Analytics } from '@vercel/analytics/react';
 // import { Inter } from 'next/font/google';
 import './styles/normalize.css';
 import './styles/globals.css';
@@ -63,6 +64,7 @@ export default function RootLayout({
             </main>
           </LanguageProvider>
         </DarkModeProvider>
+        <Analytics />
       </body>
     </html>
   );

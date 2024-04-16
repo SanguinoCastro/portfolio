@@ -13,6 +13,7 @@
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.0",
     "@formspree/react": "^2.5.1",
+    "@vercel/analytics": "^1.2.2",
     "axios": "^1.6.7",
     "cookies-next": "^4.1.1",
     "flowbite": "^2.2.1",
