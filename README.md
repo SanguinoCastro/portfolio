@@ -1,8 +1,6 @@
 
 # Mi Portfolio
 
- (Actualmente en desarrollo)
-
 Este es mi portfolio personal. Aquí podrás encontrar información sobre mí, mis proyectos y métodos de contacto.
 
 ## Características
@@ -11,19 +9,20 @@ Este es mi portfolio personal. Aquí podrás encontrar información sobre mí, m
 - Elementos interactivos similares a widgets.
 - Desarrollado con tecnologías modernas como NEXT.js, TypeScript y Tailwind CSS.
 
-## Capturas de Pantalla
+<!-- ## Capturas de Pantalla
 
-(Inserta aquí capturas de pantalla de tu proyecto, si es posible)
+(Inserta aquí capturas de pantalla de tu proyecto, si es posible) -->
 
 
 
 ## Estructura del Proyecto
 
 
-├── pages/          # Páginas principales de NEXT.js  
+├── app/            # Página principal, layout, favicon, estilos CSS, context, y página 
+|                     privacidad.  
 ├── components/     # Componentes reutilizables   
 ├── assets/         # Assets como imágenes, fuentes, etc.  
-├── public/         # Recursos estáticos  
+├── public/         # CV
 └── ...
 ## Instalación
 

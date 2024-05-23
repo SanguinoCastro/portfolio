@@ -235,7 +235,7 @@ section p {
 }
 
 .grid__container {
-  grid-template-rows: 17rem 19.6rem 15rem 60rem 12.8rem 31.2rem 16rem 9.8rem;
+  grid-template-rows: 17rem 19.6rem 15rem 100rem 12.8rem 31.2rem 16rem 9.8rem;
 }
 
 .linkedin,
@@ -260,7 +260,7 @@ section p {
 
   .grid__container {
     grid-template-columns: repeat(4, minmax(0, 1fr));
-    grid-template-rows: 21rem 19rem 15rem 33.7rem 60rem 10rem 22.4rem 20rem 10rem;
+    grid-template-rows: 21rem 19rem 15rem 33.7rem 95rem 10rem 22.4rem 20rem 10rem;
     height: 227.7rem;
   }
 
@@ -323,7 +323,7 @@ section p {
 
 @media (max-width: 838px) {
   .grid__container {
-    grid-template-rows: 20rem 19rem 15rem 33.7rem 60rem 10rem 22.4rem 20rem 10rem;
+    grid-template-rows: 20rem 19rem 15rem 33.7rem 95rem 10rem 22.4rem 20rem 10rem;
     height: 226.7rem;
   }
   .about__containerUp {
@@ -341,7 +341,7 @@ section p {
 @media (max-width: 817px) {
   .grid__container {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    grid-template-rows: 11rem 60rem 12rem 20rem 60rem 17rem 14.6rem 33rem 10rem;
+    grid-template-rows: 11rem 60rem 12rem 20rem 95rem 17rem 14.6rem 33rem 10rem;
 
     height: 254.2rem;
   }
@@ -473,7 +473,7 @@ section p {
 
   .grid__container {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    grid-template-rows: 11rem 62rem 12rem 20rem 60rem 17rem 40rem 10rem;
+    grid-template-rows: 11rem 62rem 12rem 20rem 95rem 17rem 40rem 10rem;
     height: 246.7rem;
   }
   .about__avatar {
@@ -506,7 +506,7 @@ section p {
 
 @media (max-width: 449px) {
   .grid__container {
-    grid-template-rows: 11rem 64rem 12rem 20rem 60rem 25rem 40rem 10rem;
+    grid-template-rows: 11rem 64rem 12rem 20rem 95rem 25rem 40rem 10rem;
     height: 256.6rem;
   }
 }
@@ -519,7 +519,7 @@ section p {
 
 @media (max-width: 362px) {
   .grid__container {
-    grid-template-rows: 11rem 68rem 12rem 20rem 60rem 25rem 40rem 10rem;
+    grid-template-rows: 11rem 68rem 12rem 20rem 95rem 25rem 40rem 10rem;
     height: 260.6rem;
   }
 }
@@ -542,7 +542,7 @@ section p {
 
 @media (max-width: 307px) {
   .grid__container {
-    grid-template-rows: 11rem 70rem 12rem 20rem 60rem 27rem 40rem 10rem;
+    grid-template-rows: 11rem 70rem 12rem 20rem 95rem 27rem 40rem 10rem;
     height: 264.6rem;
   }
 }

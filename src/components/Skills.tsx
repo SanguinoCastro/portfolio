@@ -25,6 +25,8 @@ import reactWhite from '../assets/icons/React-white.svg';
 import reactGreen from '../assets/icons/React-green.svg';
 import sassWhite from '../assets/icons/Sass-white.svg';
 import sassGreen from '../assets/icons/Sass-green.svg';
+import gulpWhite from '../assets/icons/gulp-white.svg';
+import gulpGreen from '../assets/icons/gulp-green.svg';
 import Image from 'next/image';
 import { useDarkMode } from '@/app/context/DarkModeContext';
 
@@ -48,6 +50,7 @@ const whiteSkills = [
   githubWhite,
   jiraWhite,
   sassWhite,
+  gulpWhite,
 ];
 
 const greenSkills = [
@@ -64,6 +67,7 @@ const greenSkills = [
   githubGreen,
   jiraGreen,
   sassGreen,
+  gulpGreen,
 ];
 const Skills = () => {
   const { isDarkMode } = useDarkMode();
