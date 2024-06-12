@@ -15,6 +15,7 @@ import './styles/whatsapp.css';
 import './styles/dice.css';
 import './styles/privacity.css';
 import './styles/animation.css';
+import './styles/kofi.css';
 
 import { DarkModeProvider } from './context/DarkModeContext';
 import Footer from '@/components/Footer';

@@ -3,7 +3,7 @@ const KofiScript = () => {
     <a
       href='https://ko-fi.com/S6S2Z8P35'
       target='_blank'
-      className='z-[500] fixed bottom-[5rem] right-[5rem] opacity-75 transition-all hover:scale-110 hover:opacity-100 '
+      className='kofi z-[500] fixed bottom-[5rem] right-[5rem] opacity-75 transition-all hover:scale-110 hover:opacity-100 '
     >
       <img
         height='36'

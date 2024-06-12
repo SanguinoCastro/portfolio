@@ -1,0 +1,11 @@
+@media (max-width: 666px) {
+  .kofi {
+    right: 1rem;
+  }
+}
+
+@media (max-width: 425px) {
+  .kofi img {
+    scale: 80%;
+  }
+}
