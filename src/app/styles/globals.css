@@ -100,7 +100,7 @@
 }
 
 .olive:hover {
-  background: var(--husk);
+  background: var(--black);
 }
 
 .capital {
@@ -242,9 +242,9 @@ section p {
   transform: scale(110%);
 }
 
-/* .footer {
-  margin-top: 39.99rem;
-} */
+.footer {
+  margin-top: 0.5rem;
+}
 
 /* Media queries */
 
@@ -314,6 +314,9 @@ section p {
   .grid__form {
     grid-row-start: 8;
     grid-row-end: 10;
+  }
+  .footer {
+    margin-top: 0;
   }
 }
 

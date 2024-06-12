@@ -102,9 +102,18 @@ const ContactForm = () => {
         <div className='input__privacity flex gap-4'>
           <input type='checkbox' name='privacity' id='privacity' required />
           <label htmlFor='privacity' className='privacity__label text-[1.4rem]'>
-            *Acepto la{' '}
-            <a href='/privacity' className='text-[var(--olive)] underline'>
-              política de privacidad
+            {language === 'es'
+              ? '*Acepto la '
+              : language === 'ca'
+                ? 'Accepto la '
+                : 'I accept the '}
+
+            <a href='/privacity' className=' underline'>
+              {language === 'es'
+                ? 'política de privacidad'
+                : language === 'ca'
+                  ? 'política de privacitat'
+                  : 'privacy policy'}
             </a>
           </label>
         </div>
