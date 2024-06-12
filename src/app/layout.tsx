@@ -19,6 +19,7 @@ import './styles/animation.css';
 import { DarkModeProvider } from './context/DarkModeContext';
 import Footer from '@/components/Footer';
 import { LanguageProvider } from './context/LanguageContext';
+import KofiScript from '@/components/KofiScript';
 
 // const inter = Inter({ subsets: ['latin'] });
 
@@ -59,6 +60,7 @@ export default function RootLayout({
             <main className='flex justify-center  mt-[2rem]'>
               <div className='main__container center w-[113.5rem] flex flex-col justify-between'>
                 <div className='delayed-show'>{children}</div>
+                <KofiScript />
                 <Footer />
               </div>
             </main>
