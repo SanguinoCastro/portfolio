@@ -155,8 +155,6 @@ const Card = (props: any) => {
     );
   const unicode = '\u00b0';
 
-  //   ${cityDate + dateSuffix}
-
   //actual data array
   let weatherArray = [cityName, fullDate]; //mainTime
   //weather key names
@@ -178,7 +176,7 @@ const Card = (props: any) => {
   });
 
   console.log(hours, weatherDescription);
-  // weatherDescription = 'snow';
+  // weatherDescription = 'Nika';
   return (
     <div className='weather__card h-[89%] w-[94.5%]  border-rad mt-[-4.5rem] pt-[3.2rem] '>
       <p
@@ -204,7 +202,7 @@ const Card = (props: any) => {
       <div
         className={` ${isDay ? 'weather__icon--day' : 'weather__icon--night'} w-[45%] h-[21rem]  flex justify-center items-center mt-[-15rem] ml-[58%] weather__icon`}
       >
-        <div className='weather__icon--image mt-[6rem]'>
+        <div className='weather__icon--image mt-[0rem]'>
           {(weatherDescription === 'clear sky' && !isDay) ||
           (weatherDescription === 'clear sky' && !isDay) ? (
             <Image
@@ -234,7 +232,7 @@ const Card = (props: any) => {
               src={cloud}
               width={100}
               alt='weather-icon'
-              className={`cloud mt-[1rem] mb-[-2rem] shadow_filter`}
+              className={`cloud mt-[-2rem] mb-[-2rem] shadow_filter`}
             />
           ) : weatherDescription === 'few clouds' && isDay ? (
             <Image
@@ -260,7 +258,7 @@ const Card = (props: any) => {
               src={rainSun}
               width={90}
               alt='weather-icon'
-              className={`rain--sun mt-[1rem] mb-[-1.5rem] shadow_filter`}
+              className={`rain--sun mt-[-1rem] mb-[-1.5rem] shadow_filter`}
             />
           ) : (weatherDescription === 'rain' && !isDay) ||
             (weatherDescription === 'light rain' && !isDay) ||
@@ -363,10 +361,3 @@ const Card = (props: any) => {
   );
 };
 export default Card;
-
-{
-  /* <p className='weather__temperature text-[var(--white)] flex justify-center mt-[-1.5rem] ml-[21.5rem] text-[1.8rem] text-white'>
-        {weatherForecast}
-        {unicode}
-      </p> */
-}
