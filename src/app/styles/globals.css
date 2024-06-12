@@ -73,14 +73,6 @@
     opacity: 1;
   }
 }
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-} */
-
 /** Utilidades **/
 .no-margin {
   margin: 0;
@@ -250,6 +242,10 @@ section p {
   transform: scale(110%);
 }
 
+.footer {
+  margin-top: 39.99rem;
+}
+
 /* Media queries */
 
 @media (max-width: 1211px) {
@@ -318,6 +314,9 @@ section p {
   .grid__form {
     grid-row-start: 8;
     grid-row-end: 10;
+  }
+  .footer {
+    margin-top: 35rem;
   }
 }
 
