@@ -85,14 +85,14 @@ const ContactForm = () => {
           name='email'
           id='email'
           placeholder='*Email'
-          className={` ${isDarkMode ? 'input__dark' : 'input'} input__email w-[35rem] h-[4rem] rounded-xl p-[1rem] text-[1.6rem] bg-[var(--secondary-input)] border-[0.2rem] border-[var(--secondary-border)]`}
+          className={`input ${isDarkMode ? 'input__dark' : ''} input__email w-[35rem] h-[4rem] rounded-xl p-[1rem] text-[1.6rem] bg-[var(--secondary-input)] border-[0.2rem] border-[var(--secondary-border)]`}
           pattern='^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
           required
         />
         <ValidationError prefix='Email' field='email' errors={state.errors} />
 
         <textarea
-          className={` ${isDarkMode ? 'input__dark' : 'input'} input__message h-[15rem] w-[35rem] rounded-xl p-[1rem] text-[1.6rem] bg-[var(--secondary-input)] border-[0.2rem] border-[var(--secondary-border)]`}
+          className={`input ${isDarkMode ? 'input__dark' : ''} input__message h-[15rem] w-[35rem] rounded-xl p-[1rem] text-[1.6rem] bg-[var(--secondary-input)] border-[0.2rem] border-[var(--secondary-border)]`}
           name='message'
           id='message'
           placeholder={`${language === 'es' ? '*Mensaje' : language === 'ca' ? '*Missatge' : '*Message'}`}
