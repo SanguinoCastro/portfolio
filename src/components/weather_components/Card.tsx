@@ -178,7 +178,7 @@ const Card = (props: any) => {
   console.log(hours, weatherDescription);
   // weatherDescription = 'Nika';
   return (
-    <div className='weather__card h-[89%] w-[94.5%]  border-rad mt-[-4.5rem] pt-[3.2rem] '>
+    <div className='weather__card h-[89%] w-[94.5%]  border-rad mt-[-4.5rem] pt-[3.21rem] '>
       <p
         className={`weather__title  flex justify-center mt-[-1rem] mr-[17rem] text-[1.8rem]  ${isDarkMode ? 'text-[var(--white)]' : 'text-[var(--black)]'}`}
       >
