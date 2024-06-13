@@ -2,9 +2,11 @@
 import React, { useState } from 'react';
 import { useForm, ValidationError } from '@formspree/react';
 import { useLanguage } from '@/app/context/LanguageContext';
+import { useDarkMode } from '@/app/context/DarkModeContext';
 
 const ContactForm = () => {
   const { language } = useLanguage();
+  const { isDarkMode } = useDarkMode();
   const [state] = useForm('mnqegdpk');
   const [errorMail] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
@@ -83,14 +85,14 @@ const ContactForm = () => {
           name='email'
           id='email'
           placeholder='*Email'
-          className={`input input__email w-[35rem] h-[4rem] rounded-xl p-[1rem] text-[1.6rem] bg-[var(--secondary-input)] border-[0.2rem] border-[var(--secondary-border)]`}
+          className={` ${isDarkMode ? 'input__dark' : 'input'} input__email w-[35rem] h-[4rem] rounded-xl p-[1rem] text-[1.6rem] bg-[var(--secondary-input)] border-[0.2rem] border-[var(--secondary-border)]`}
           pattern='^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
           required
         />
         <ValidationError prefix='Email' field='email' errors={state.errors} />
 
         <textarea
-          className={`input input__message h-[15rem] w-[35rem] rounded-xl p-[1rem] text-[1.6rem] bg-[var(--secondary-input)] border-[0.2rem] border-[var(--secondary-border)]`}
+          className={` ${isDarkMode ? 'input__dark' : 'input'} input__message h-[15rem] w-[35rem] rounded-xl p-[1rem] text-[1.6rem] bg-[var(--secondary-input)] border-[0.2rem] border-[var(--secondary-border)]`}
           name='message'
           id='message'
           placeholder={`${language === 'es' ? '*Mensaje' : language === 'ca' ? '*Missatge' : '*Message'}`}

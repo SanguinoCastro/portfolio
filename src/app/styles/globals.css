@@ -111,6 +111,16 @@
   overflow: hidden;
 }
 
+.input::placeholder {
+  color: grey;
+  font-weight: bold;
+}
+
+.input__dark::placeholder {
+  color: var(--white);
+  opacity: 0.8;
+}
+
 /** Custom CSS **/
 html {
   height: 100%;
