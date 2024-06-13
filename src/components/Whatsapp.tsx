@@ -22,7 +22,7 @@ const Whatsapp = () => {
       <div className='buttons__text flex flex-col gap-[2rem] justify-center items-center'>
         <button
           onClick={handleWhatsapp}
-          className='whatsapp__button olive w-[25.2rem] h-[5rem] rounded-xl text-[1.8rem] transition-all duration-300 flex gap-[1rem] justify-center items-center hover:scale-105 px-[2rem]'
+          className='whatsapp__button olive w-[25.21rem] h-[5rem] rounded-xl text-[1.8rem] transition-all duration-300 flex gap-[1rem] justify-center items-center hover:scale-105 px-[2rem]'
         >
           <Image
             src={whatsappImg}
