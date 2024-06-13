@@ -202,7 +202,7 @@ const Card = (props: any) => {
       <div
         className={` ${isDay ? 'weather__icon--day' : 'weather__icon--night'} w-[45%] h-[21rem]  flex justify-center items-center mt-[-15rem] ml-[58%] weather__icon`}
       >
-        <div className='weather__icon--image mt-[0rem]'>
+        <div className='weather__icon--image mt-[4rem]'>
           {(weatherDescription === 'clear sky' && !isDay) ||
           (weatherDescription === 'clear sky' && !isDay) ? (
             <Image
