@@ -6,7 +6,12 @@
   .contact__title {
     width: 35%;
     margin-right: 1rem;
+    margin-top: -3rem;
   }
+
+  /* .cpmtact__title__h1 {
+    margin-top: -3rem;
+  } */
 
   .contact__title__p {
     width: 100%;
